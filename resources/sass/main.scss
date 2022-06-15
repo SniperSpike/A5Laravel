@@ -45,10 +45,11 @@ footer {
     font-weight: bold;
     &:hover {
         color: white;
+        background-color: lighten($primaryColor, 10%);
     }
 
     .loginIcon {
-        width: 15px;
-        height: 15px;
+        width: 17px;
+        height: 17px;
     }
 }
