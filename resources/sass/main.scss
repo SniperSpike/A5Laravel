@@ -1,14 +1,40 @@
-body {
-    background: blue;
-}
-.classboy1 {
-    background: green;
+// variables
+$primaryColor: #433da0;
+$secondaryColor: #adaabb;
+$fontColor: #1a2542;
+$backgroundColor: #ffffff;
+
+.navbar-brand {
+    color: $primaryColor !important;
+    font-weight: bold;
 }
 
-.kakkapaard {
-    color: green;
+.navbar-nav {
+    .active {
+        a {
+            color: $primaryColor !important;
+        }
+    }
+    li {
+        a {
+            font-weight: bold;
+            color: $secondaryColor !important;
+        }
+    }
 }
 
-.testclass {
-    background: yellow;
+footer {
+    height: 70px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+    span {
+        color: white;
+        font-weight: bold;
+    }
 }

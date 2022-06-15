@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     EPK Media
@@ -34,7 +34,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">{{ __('Home') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{{ __('Verkennen') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -79,6 +84,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer>
+            <span>Copyright © 2022</span>
+        </footer>
     </div>
 </body>
 </html>
