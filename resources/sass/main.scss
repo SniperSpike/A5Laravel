@@ -76,6 +76,13 @@ footer {
         border: none;
         border-bottom: 1px solid $secondaryColor;
         border-radius: 0;
+        background-color: $backgroundColor;
+    }
+
+    input[type="checkbox"] {
+        &:checked {
+            background-color: $primaryColor;
+        }
     }
 
     .btn-loginForm {
