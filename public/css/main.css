@@ -32,3 +32,16 @@ footer span {
   color: white;
   font-weight: bold;
 }
+
+.btn-login {
+  background-color: #433da0;
+  color: white;
+  font-weight: bold;
+}
+.btn-login:hover {
+  color: white;
+}
+.btn-login .loginIcon {
+  width: 15px;
+  height: 15px;
+}

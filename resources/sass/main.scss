@@ -38,3 +38,17 @@ footer {
         font-weight: bold;
     }
 }
+
+.btn-login {
+    background-color: $primaryColor;
+    color: white;
+    font-weight: bold;
+    &:hover {
+        color: white;
+    }
+
+    .loginIcon {
+        width: 15px;
+        height: 15px;
+    }
+}
