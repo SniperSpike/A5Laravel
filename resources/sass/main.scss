@@ -4,6 +4,8 @@ $secondaryColor: #adaabb;
 $fontColor: #1a2542;
 $backgroundColor: #ffffff;
 
+// Layout App Blade
+
 .navbar-brand {
     color: $primaryColor !important;
     font-weight: bold;
@@ -19,6 +21,9 @@ $backgroundColor: #ffffff;
         a {
             font-weight: bold;
             color: $secondaryColor !important;
+            &:hover {
+                color: $primaryColor !important;
+            }
         }
     }
 }
@@ -53,6 +58,8 @@ footer {
         height: 17px;
     }
 }
+
+// Login Page
 
 .loginForm {
     h2 {

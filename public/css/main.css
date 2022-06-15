@@ -10,6 +10,9 @@
   font-weight: bold;
   color: #adaabb !important;
 }
+.navbar-nav li a:hover {
+  color: #433da0 !important;
+}
 
 footer {
   height: 70px;
