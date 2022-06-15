@@ -118,17 +118,13 @@ footer {
 
     input[type="password"] {
         letter-spacing: 4px;
-        font-size: 20px;
-        padding: 0.1em 0em;
     }
 
     input {
         border: none;
         border-bottom: 1px solid $secondaryColor;
         border-radius: 0;
-        padding: 0em 0em;
         color: $fontColor;
-        font-size: 21px;
     }
 
     .btn-RegisterForm {

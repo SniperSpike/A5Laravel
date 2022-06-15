@@ -111,16 +111,12 @@ footer span {
 }
 .registerForm input[type=password] {
   letter-spacing: 4px;
-  font-size: 20px;
-  padding: 0.1em 0em;
 }
 .registerForm input {
   border: none;
   border-bottom: 1px solid #adaabb;
   border-radius: 0;
-  padding: 0em 0em;
   color: #1a2542;
-  font-size: 21px;
 }
 .registerForm .btn-RegisterForm {
   width: 100%;
