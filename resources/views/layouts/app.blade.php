@@ -84,7 +84,7 @@
             </div>
         </nav>
 
-        <main class="homecontentwrapper">
+        <main class="py-4">
             @yield('content')
         </main>
         <footer>
