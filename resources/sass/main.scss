@@ -53,3 +53,45 @@ footer {
         height: 17px;
     }
 }
+
+.loginForm {
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        color: $fontColor;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        border: none;
+        border-bottom: 1px solid $primaryColor;
+        border-radius: 0;
+    }
+
+    .btn-loginForm {
+        width: 100%;
+        background-color: $primaryColor;
+        padding: 0.5em;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: white;
+        &:hover {
+            background-color: lighten($primaryColor, 10%);
+        }
+    }
+
+    .btn-RegisterForm {
+        width: 100%;
+        background-color: #fff;
+        padding: 0.5em;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: $primaryColor;
+        box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+        &:hover {
+            background-color: darken(#ffffff, 5%);
+        }
+    }
+}
