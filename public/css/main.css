@@ -50,6 +50,9 @@ footer span {
   height: 17px;
 }
 
+.loginForm {
+  margin-top: 40%;
+}
 .loginForm h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +66,7 @@ footer span {
 .loginForm input[type=email],
 .loginForm input[type=password] {
   border: none;
-  border-bottom: 1px solid #433da0;
+  border-bottom: 1px solid #adaabb;
   border-radius: 0;
 }
 .loginForm .btn-loginForm {
@@ -91,4 +94,44 @@ footer span {
 }
 .loginForm .btn-RegisterForm:hover {
   background-color: #f2f2f2;
+}
+
+.registerForm {
+  margin-top: 36%;
+}
+.registerForm h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  color: #1a2542;
+}
+.registerForm input[type=password] {
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding: 0.1em 0em;
+}
+.registerForm input {
+  border: none;
+  border-bottom: 1px solid #adaabb;
+  border-radius: 0;
+  padding: 0em 0em;
+  color: #1a2542;
+  font-size: 21px;
+}
+.registerForm .btn-RegisterForm {
+  width: 100%;
+  background-color: #433da0;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.registerForm .btn-RegisterForm:hover {
+  background-color: #5953bd;
 }
