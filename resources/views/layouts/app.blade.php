@@ -51,17 +51,9 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> --}}
                                     <a href="{{ route('login') }}"><button type="button" class="btn btn-login"><img class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
-                                    
                                 </li>
                             @endif
-
-                            {{-- @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif --}}
                         @else
                             <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>

@@ -5,7 +5,7 @@
     <h1>Dashboard</h1>
     <h3>Mijn Bands</h3>
     <div class="bandListContainer">
-        @for ($i = 0; $i < 1; $i++) 
+        @for ($i = 0; $i < 8; $i++) 
         <a href="{{ route('bandinfo')}}">
             <div class="bandItem">
                 <p>AC/DC</p>
