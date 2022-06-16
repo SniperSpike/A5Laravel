@@ -1,0 +1,36 @@
+.bandInfoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.bandInfoWrapper .banner {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  border-radius: 20px;
+  background-color: green;
+}
+.bandInfoWrapper .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bandInfoWrapper .info .bio,
+.bandInfoWrapper .info .muziek {
+  width: 50%;
+  height: 40vh;
+}
+.bandInfoWrapper .info .bio {
+  background-color: purple;
+}
+.bandInfoWrapper .info .muziek {
+  background-color: blue;
+}

@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                  <p>test</p>
-                </div>
-            </div>
+<div class="container col-md-7 col-sm-12 bandInfoWrapper">
+    <div class="banner">
+        <p>banner</p>
+    </div>
+    <div class="info">
+        <div class="bio">
+            <h2>biographie</h2>
+        </div>
+        <div class="muziek">
+            <h2>muziek</h2>
         </div>
     </div>
 </div>
