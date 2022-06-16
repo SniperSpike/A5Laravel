@@ -23,6 +23,7 @@
             color: $secondaryColor;
             font-size: 17px;
             padding-left: 1em;
+            font-family: Berlin Sans FB;
             &::placeholder {
                 color: $secondaryColor;
             }
@@ -35,6 +36,7 @@
         font-weight: bold;
         font-size: 22px;
         font-family: Berlin Sans FB;
+        margin-top: 0.5em;
     }
     .verkenItems {
         display: flex;
@@ -56,6 +58,9 @@
             margin-top: 0.5em;
             color: $fontColor;
             font-size: 18px;
+            font-family: Berlin Sans FB;
+            padding: unset;
+            margin: 0.5em 0em 0em 0em;
         }
     }
 }
