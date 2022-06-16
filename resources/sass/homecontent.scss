@@ -22,9 +22,24 @@
     }
   }
   .about-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     min-height: 30vh;
     object-fit: contain;
+    // border: 2px solid black;
+  }
+
+  article {
+    width: 648px;
+    height: 463px;
+  }
+
+  img {
+    width: 523px;
+    height: 533px;
   }
 }
 
