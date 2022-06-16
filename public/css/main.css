@@ -14,12 +14,17 @@
   color: #433da0 !important;
 }
 
+.footerfix {
+  position: relative;
+  min-height: calc(100vh - 55px);
+}
+
 footer {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;

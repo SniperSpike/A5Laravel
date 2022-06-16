@@ -21,6 +21,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/homecontent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -36,10 +37,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">{{ __('Home') }}</a>
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::is('verkennen') ? 'active' : '' }}">
                             <a class="nav-link" href="#">{{ __('Verkennen') }}</a>
                         </li>
                     </ul>
@@ -51,7 +52,7 @@
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> --}}
-                                    <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-login"><img class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
+                                    <a href="{{ route('login') }}"><button type="button" class="btn btn-login"><img class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
                                     
                                 </li>
                             @endif
@@ -62,6 +63,9 @@
                                 </li>
                             @endif --}}
                         @else
+                            <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -85,13 +89,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 footerfix">
             @yield('content')
             @yield('homecontent')
+            <footer>
+                <span>Copyright © 2022</span>
+            </footer>
         </main>
-        <footer>
-            <span>Copyright © 2022</span>
-        </footer>
+
     </div>
 </body>
 </html>

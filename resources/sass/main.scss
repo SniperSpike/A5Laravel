@@ -1,8 +1,5 @@
-// variables
-$primaryColor: #433da0;
-$secondaryColor: #adaabb;
-$fontColor: #1a2542;
-$backgroundColor: #ffffff;
+// Variables
+@import "variables";
 
 // Layout App Blade
 
@@ -28,10 +25,15 @@ $backgroundColor: #ffffff;
     }
 }
 
+.footerfix {
+    position: relative;
+    min-height: calc(100vh - 55px);
+}
+
 footer {
     height: 70px;
     display: flex;
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;

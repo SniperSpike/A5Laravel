@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138" height="101" viewBox="0 0 138 101">
+  <g id="Group_46" data-name="Group 46" transform="translate(-408 -197)">
+    <g id="Group_43" data-name="Group 43" transform="translate(-2 -17)">
+      <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(450 214)" fill="#fff" stroke="#433da0" stroke-width="2" stroke-dasharray="14 6">
+        <circle cx="29" cy="29" r="29" stroke="none"/>
+        <circle cx="29" cy="29" r="28" fill="none"/>
+      </g>
+      <text id="_" data-name="+" transform="translate(479 255)" fill="#433da0" font-size="34" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-9.928" y="0">+</tspan></text>
+    </g>
+    <text id="Voeg_band_toe" data-name="Voeg band toe" transform="translate(477 293)" fill="#433da0" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-68.149" y="0">Voeg band toe</tspan></text>
+  </g>
+</svg>

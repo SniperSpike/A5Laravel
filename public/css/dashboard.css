@@ -1,0 +1,74 @@
+.dashboardWrapper a {
+  text-decoration: none;
+}
+.dashboardWrapper h1 {
+  color: #433da0;
+  font-weight: bold;
+  font-family: Arial;
+}
+.dashboardWrapper h3 {
+  color: #1a2542;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: Arial;
+}
+.dashboardWrapper .bandListContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em 3em;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+}
+.dashboardWrapper .bandListContainer .bandItem,
+.dashboardWrapper .bandListContainer .addBandItem {
+  cursor: pointer;
+  text-decoration: none;
+}
+.dashboardWrapper .bandListContainer .bandItem {
+  width: 398px;
+  height: 214px;
+  border-radius: 20px;
+  color: white;
+  font-size: 2em;
+  position: relative;
+}
+.dashboardWrapper .bandListContainer .bandItem p {
+  margin-bottom: unset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.dashboardWrapper .bandListContainer .bandItem img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+}
+.dashboardWrapper .bandListContainer .addBandItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 398px;
+  height: 214px;
+  border-radius: 20px;
+  border: 2px solid rgba(67, 61, 160, 0.45);
+}

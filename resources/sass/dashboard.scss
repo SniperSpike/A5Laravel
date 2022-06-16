@@ -1,0 +1,65 @@
+// Variables
+@import "variables";
+
+.dashboardWrapper {
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        color: $primaryColor;
+        font-weight: bold;
+        font-family: Arial;
+    }
+
+    h3 {
+        color: $fontColor;
+        font-weight: bold;
+        font-size: 21px;
+        font-family: Arial;
+    }
+    .bandListContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1em 3em;
+        justify-content: normal;
+
+        .bandItem,
+        .addBandItem {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .bandItem {
+            width: 398px;
+            height: 214px;
+            border-radius: 20px;
+            color: white;
+            font-size: 2em;
+            position: relative;
+
+            p {
+                margin-bottom: unset;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 20px;
+            }
+        }
+        .addBandItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 398px;
+            height: 214px;
+            border-radius: 20px;
+            border: 2px solid rgba(67, 61, 160, 0.45);
+        }
+    }
+}
