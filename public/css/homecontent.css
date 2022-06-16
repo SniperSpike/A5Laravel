@@ -3,6 +3,7 @@
   min-height: auto;
   margin: auto;
   background: #ffffff;
+  overflow-y: hidden;
 }
 .homecontent-wrapper .personalised-wrapper {
   display: -webkit-box;
@@ -15,11 +16,12 @@
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 2em;
 }
 .homecontent-wrapper .personalised-wrapper img {
-  width: 1085px;
-  height: 583px;
+  width: 100%;
+  max-width: 1060px;
+  height: auto;
+  border-radius: 40px;
 }
 .homecontent-wrapper .about-wrapper {
   display: -webkit-box;
@@ -39,11 +41,16 @@
   -o-object-fit: contain;
      object-fit: contain;
   margin-top: 5em;
+  gap: 8em;
+  margin-left: 8em;
 }
 .homecontent-wrapper .about-wrapper article {
   width: 643px;
   height: 468px;
-  margin-top: 2em;
+  font-family: Berlin Sans FB;
+}
+.homecontent-wrapper .about-wrapper article h1 {
+  font-weight: normal;
 }
 .homecontent-wrapper .about-wrapper img {
   width: 523px;
@@ -65,8 +72,8 @@
   margin-bottom: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
-  background: #433da0;
-  border-radius: 30px 0px 0px 30px;
+  background: linear-gradient(45deg, #433da0, #91528d);
+  border-radius: 50px 0px 0px 50px;
   padding: 10px;
   color: #ffffff;
   display: -webkit-box;
@@ -80,17 +87,25 @@
       flex-wrap: wrap;
   width: 1366px;
   height: auto;
+  padding: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container h1 {
-  font-size: 2rem;
+  font-size: 50px;
+  font-weight: normal;
+  font-family: Berlin Sans FB;
+  margin-bottom: 1em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles {
   gap: 5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles img {
-  width: 250px;
-  height: 250px;
-  padding: 10px;
+  width: 210px;
+  height: 210px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -109,6 +124,7 @@
             justify-content: center !important;
   }
   .inspiratie-wrapper .tiles-container {
+    background: #433da0 !important;
     border-radius: 0px !important;
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
