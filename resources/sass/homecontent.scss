@@ -15,6 +15,7 @@
     min-height: 30vh;
     // border: 2px solid black;
     object-fit: cover;
+    margin-top: 60px;
 
     img {
       width: 1085px;
@@ -29,17 +30,34 @@
     width: 100%;
     min-height: 30vh;
     object-fit: contain;
+    margin-top: 30px;
     // border: 2px solid black;
+
+    article {
+      width: 648px;
+      height: 463px;
+    }
+
+    img {
+      width: 523px;
+      height: 533px;
+    }
   }
 
-  article {
-    width: 648px;
-    height: 463px;
-  }
+  .inspiratie-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 30vh;
+    margin-top: 3em;
+    // border: 2px solid black;
 
-  img {
-    width: 523px;
-    height: 533px;
+    .tiles {
+      width: 1366px;
+      height: 758px;
+      border-radius: 40px 0px 0px 40px;
+      background: #433DA0;
+    }
   }
 }
 
