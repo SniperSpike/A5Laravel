@@ -85,7 +85,7 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @yield('homecontent')
         </main>
         <footer>
             <span>Copyright © 2022</span>

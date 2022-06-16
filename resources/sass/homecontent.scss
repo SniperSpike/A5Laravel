@@ -1,21 +1,47 @@
 .homecontentwrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
   border: 2px solid black;
 }
 
 .personalised {
-  width: 40vw;
+  display: flex;
+  width: 50%;
   height: 40vh;
-  border: 2px solid black;
-  border-radius: 10px;
+  // border: 2px solid black;
+  border-radius: 20px;
+
+  article {
+
+  }
 }
 
 .about {
-  width: 40vw;
-  height: 80vh;
-  border: 2px solid black;
+  justify-content: flex-start;
+  width: 80%;
+  height: 50vh;
+  // border: 2px solid black;
+
+  h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  article {
+    text-align: left;
+  }
+}
+
+.inspiration {
+  width: 100%;
+  height: 50vh;
+  // border: 2px solid black;
+}
+
+.personalised, .about, .inspiration {
+  margin-top: 2em;
 }
