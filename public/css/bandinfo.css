@@ -57,9 +57,8 @@
   font-size: 1.2em;
   letter-spacing: 2px;
 }
-
 @media (max-width: 1200px) {
-  .info {
+  .bandInfoWrapper .info {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
@@ -69,18 +68,16 @@
             justify-content: unset !important;
     gap: unset !important;
   }
-
-  .bio,
-.muziek {
+  .bandInfoWrapper .bio,
+.bandInfoWrapper .muziek {
     width: 100% !important;
     height: auto !important;
   }
-  .bio p,
-.muziek p {
+  .bandInfoWrapper .bio p,
+.bandInfoWrapper .muziek p {
     font-size: 1em !important;
   }
-
-  .banner h1 {
+  .bandInfoWrapper .banner h1 {
     font-size: 3em !important;
   }
 }

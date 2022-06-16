@@ -36,10 +36,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">{{ __('Home') }}</a>
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item {{ Request::is('/verkennen') ? 'active' : '' }}">
                             <a class="nav-link" href="#">{{ __('Verkennen') }}</a>
                         </li>
                     </ul>
@@ -62,6 +62,9 @@
                                 </li>
                             @endif --}}
                         @else
+                            <li class="nav-item {{ Request::is('/dashboard') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

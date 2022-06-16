@@ -55,25 +55,24 @@
             }
         }
     }
-}
-
-@media (max-width: $breakpoint-desktop) {
-    .info {
-        flex-direction: column !important;
-        justify-content: unset !important;
-        gap: unset !important;
-    }
-    .bio,
-    .muziek {
-        width: 100% !important;
-        height: auto !important;
-        p {
-            font-size: 1em !important;
+    @media (max-width: $breakpoint-desktop) {
+        .info {
+            flex-direction: column !important;
+            justify-content: unset !important;
+            gap: unset !important;
         }
-    }
-    .banner {
-        h1 {
-            font-size: 3em !important;
+        .bio,
+        .muziek {
+            width: 100% !important;
+            height: auto !important;
+            p {
+                font-size: 1em !important;
+            }
+        }
+        .banner {
+            h1 {
+                font-size: 3em !important;
+            }
         }
     }
 }
