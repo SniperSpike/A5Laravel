@@ -3,7 +3,7 @@
   min-height: auto;
   margin: auto;
   background: #ffffff;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .homecontent-wrapper .personalised-wrapper {
   display: -webkit-box;
