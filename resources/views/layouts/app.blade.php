@@ -53,7 +53,7 @@
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> --}}
-                                    <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-login"><img class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
+                                    <a href="{{ route('login') }}"><button type="button" class="btn btn-login"><img class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
                                     
                                 </li>
                             @endif
@@ -90,13 +90,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 footerfix">
             @yield('content')
             @yield('homecontent')
+            <footer>
+                <span>Copyright © 2022</span>
+            </footer>
         </main>
-        <footer>
-            <span>Copyright © 2022</span>
-        </footer>
+
     </div>
 </body>
 </html>

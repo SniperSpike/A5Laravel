@@ -20,10 +20,6 @@
         </div>
         <div class="muziek">
             <h2>muziek</h2>
-            <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/v2AC41dglnM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe> -->
             <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -33,13 +29,13 @@
                             allowfullscreen></iframe>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/l482T0yNkeo"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/etAIpkdhU9Q"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
