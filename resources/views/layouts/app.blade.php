@@ -85,7 +85,6 @@
 
         <main class="py-4 footerfix">
             @yield('content')
-            @yield('homecontent')
             <footer>
                 <span>Copyright © 2022</span>
             </footer>

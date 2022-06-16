@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('homecontent')
+@section('content')
 <div class="homecontent-wrapper">
     <div class="personalised-wrapper">
         <img src="{{asset('images/calltoaction.svg')}}" alt="">
@@ -17,16 +17,9 @@
     </div>
     <div class="inspiratie-wrapper">
         <div class="tiles-container">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
-            <img src="{{asset('images/inspiratie.svg')}}" alt="">
+            @for($i = 0; $i < 10; $i++)
+                <img src="{{asset('images/test/inspiratie.png')}}">
+            @endfor
         </div>
     </div>
 </div>
