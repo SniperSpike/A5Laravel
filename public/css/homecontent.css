@@ -4,12 +4,8 @@
   margin: auto;
 }
 .homecontent-wrapper .personalised-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   min-height: 30vh;
   -o-object-fit: cover;
@@ -20,18 +16,10 @@
   height: 583px;
 }
 .homecontent-wrapper .about-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 30vh;
   -o-object-fit: contain;
