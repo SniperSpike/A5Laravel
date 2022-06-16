@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('homecontent')
+@section('content')
 <div class="homecontent-wrapper">
     <div class="personalised-wrapper">
         <img src="{{asset('images/calltoaction.svg')}}" alt="">
