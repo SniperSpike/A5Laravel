@@ -1,47 +1,58 @@
+
+
+// Homepage content container
+
 .homecontentwrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
-  border: 2px solid black;
+  // border: 2px solid black;
+  
 }
+
+// Gepersonaliseerde bibliotheek container
 
 .personalised {
   display: flex;
-  width: 50%;
-  height: 40vh;
-  // border: 2px solid black;
-  border-radius: 20px;
-
-  article {
-
-  }
-}
-
-.about {
-  justify-content: flex-start;
-  width: 80%;
-  height: 50vh;
-  // border: 2px solid black;
-
-  h1 {
-    text-align: left;
-    font-size: 2rem;
-  }
-
-  article {
-    text-align: left;
-  }
-}
-
-.inspiration {
+  position: relative;
+  justify-content: center;
+  object-fit: contain;
   width: 100%;
   height: 50vh;
+  margin-top: 2em;
   // border: 2px solid black;
+
+  // Achtergrond afbeelding
+
+  img {
+    opacity: 0.8;
+  }
+
+  // Binnenliggende button
+  
+  button {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(50%);
+    background: #FFFFFF;
+    border: 4px #FFFFFF;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 10px;
+  }
+
+
+// Over ons container 
+
+.about {
+  width: 100%;
+  height: 40vh;
+  border: 2px solid black;
 }
 
-.personalised, .about, .inspiration {
-  margin-top: 2em;
+
 }
