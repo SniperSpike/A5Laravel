@@ -15,7 +15,7 @@
     min-height: 30vh;
     // border: 2px solid black;
     object-fit: cover;
-    margin-top: 60px;
+    margin-top: 2em;
 
     img {
       width: 100%;
@@ -30,17 +30,18 @@
     width: 100%;
     min-height: 30vh;
     object-fit: contain;
-    margin-top: 30px;
+    margin-top: 5em;
     // border: 2px solid black;
 
     article {
-      width: 648px;
-      height: 463px;
+      width: 35vw;
+      height: 50vh;
+      margin-top: 2em;
     }
 
     img {
-      width: 523px;
-      height: 533px;
+      width: 35vw;
+      height: 50vh;
     }
   }
 
@@ -48,15 +49,27 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    min-height: 30vh;
-    margin-top: 3em;
+    min-height: 50vh;
+    margin-top: 5em;
     // border: 2px solid black;
 
-    .tiles {
-      width: 1366px;
-      height: 758px;
+    .tiles-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 75vw;
+      height: 75vh;
       border-radius: 40px 0px 0px 40px;
       background: #433DA0;
+
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        padding: 10px;
+        object-fit: contain;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@
   min-height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 60px;
+  margin-top: 2em;
 }
 .homecontent-wrapper .personalised-wrapper img {
   width: 100%;
@@ -37,15 +37,16 @@
   min-height: 30vh;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-top: 30px;
+  margin-top: 5em;
 }
 .homecontent-wrapper .about-wrapper article {
-  width: 648px;
-  height: 463px;
+  width: 35vw;
+  height: 50vh;
+  margin-top: 2em;
 }
 .homecontent-wrapper .about-wrapper img {
-  width: 523px;
-  height: 533px;
+  width: 35vw;
+  height: 50vh;
 }
 .homecontent-wrapper .inspiratie-wrapper {
   display: -webkit-box;
@@ -55,12 +56,31 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  min-height: 30vh;
-  margin-top: 3em;
+  min-height: 50vh;
+  margin-top: 5em;
 }
-.homecontent-wrapper .inspiratie-wrapper .tiles {
-  width: 1366px;
-  height: 758px;
+.homecontent-wrapper .inspiratie-wrapper .tiles-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 75vw;
+  height: 75vh;
   border-radius: 40px 0px 0px 40px;
   background: #433DA0;
+}
+.homecontent-wrapper .inspiratie-wrapper .tiles-container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
