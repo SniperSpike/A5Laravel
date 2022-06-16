@@ -1,0 +1,48 @@
+.verkennenWrapper .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #adaabb;
+  padding: 0.5em;
+}
+.verkennenWrapper .searchBar button {
+  background-color: #433da0;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: unset;
+}
+.verkennenWrapper .searchBar input {
+  border: unset;
+  width: 100%;
+  color: #adaabb;
+  font-size: 17px;
+  padding-left: 1em;
+}
+.verkennenWrapper .searchBar input::-webkit-input-placeholder {
+  color: #adaabb;
+}
+.verkennenWrapper .searchBar input::-moz-placeholder {
+  color: #adaabb;
+}
+.verkennenWrapper .searchBar input:-ms-input-placeholder {
+  color: #adaabb;
+}
+.verkennenWrapper .searchBar input::-ms-input-placeholder {
+  color: #adaabb;
+}
+.verkennenWrapper .searchBar input::placeholder {
+  color: #adaabb;
+}
+.verkennenWrapper .searchBar input:focus {
+  outline: none;
+}
