@@ -3,16 +3,15 @@
 @section('content')
 <div class="container col-md-7 col-sm-12 bandInfoWrapper">
     <div class="banner">
-        <img src="https://ocdn.eu/pulscms-transforms/1/S2hktkuTURBXy9iZDk2ZDAwZS00ZjIzLTRlMzgtODIwMy05NGVkYWQ0Yjk1MGMuanBlZ5GTBc0EsM0CdA"
-            alt="banner photo" />
+        <h1>AC/DC</h1>
+        <img src="{{asset('images/banner.png')}}" alt="banner photo" />
     </div>
     <div class="info">
         <div class="bio">
             <h2>biographie</h2>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam m
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus
                 <br>
                 <br>
                 est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed diam nonumy
@@ -28,19 +27,19 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/v2AC41dglnM"
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/v2AC41dglnM"
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                     <div class="carousel-item">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/v2AC41dglnM"
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>

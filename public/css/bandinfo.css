@@ -17,9 +17,20 @@
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  position: relative;
 }
 .bandInfoWrapper .banner img {
   width: 100%;
+}
+.bandInfoWrapper .banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4em;
+  text-shadow: 3px 2px #1a2542;
 }
 .bandInfoWrapper .info {
   display: -webkit-box;
@@ -33,7 +44,7 @@
 .bandInfoWrapper .info .bio,
 .bandInfoWrapper .info .muziek {
   width: 50%;
-  height: 40vh;
+  min-height: 40vh;
 }
 .bandInfoWrapper .info .bio h2,
 .bandInfoWrapper .info .muziek h2 {
@@ -47,7 +58,7 @@
   letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .info {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
@@ -67,5 +78,9 @@
   .bio p,
 .muziek p {
     font-size: 1em !important;
+  }
+
+  .banner h1 {
+    font-size: 3em !important;
   }
 }

@@ -13,5 +13,9 @@ $fontColor: #1a2542;
 $backgroundColor: #ffffff;
 
 // media query breaking points
-
+$breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
+$breakpoint-small-screen: 1024px;
+$breakpoint-desktop: 1200px;
+// alles boven 1200px is tv size of groot beeldscherm
+$breakpoint-tv: 1201px;

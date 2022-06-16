@@ -13,9 +13,20 @@
         border-radius: 20px;
         object-fit: cover;
         overflow: hidden;
+        position: relative;
 
         img {
             width: 100%;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4em;
+            text-shadow: 3px 2px $fontColor;
         }
     }
 
@@ -26,7 +37,7 @@
         .bio,
         .muziek {
             width: 50%;
-            height: 40vh;
+            min-height: 40vh;
 
             h2 {
                 text-transform: uppercase;
@@ -46,7 +57,7 @@
     }
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: $breakpoint-desktop) {
     .info {
         flex-direction: column !important;
         justify-content: unset !important;
@@ -58,6 +69,11 @@
         height: auto !important;
         p {
             font-size: 1em !important;
+        }
+    }
+    .banner {
+        h1 {
+            font-size: 3em !important;
         }
     }
 }
