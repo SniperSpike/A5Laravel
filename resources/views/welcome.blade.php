@@ -17,9 +17,12 @@
     </div>
     <div class="inspiratie-wrapper">
         <div class="tiles-container">
-            @for($i = 0; $i < 10; $i++)
-                <img src="{{asset('images/test/inspiratie.png')}}">
-            @endfor
+            <h1>Inspiratie</h1>
+            <div class="tiles">
+                @for($i = 0; $i < 10; $i++)
+                    <img src="{{asset('images/test/inspiratie.png')}}">
+                @endfor
+            </div>
         </div>
     </div>
 </div>

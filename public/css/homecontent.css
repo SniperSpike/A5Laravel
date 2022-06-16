@@ -61,12 +61,18 @@
   margin-bottom: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
+  background: #433DA0;
+  border-radius: 30px 0px 0px 30px;
+  padding: 10px;
+  color: #FFFFFF;
+}
+.homecontent-wrapper .inspiratie-wrapper .tiles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -74,13 +80,10 @@
       flex-wrap: wrap;
   width: 1366px;
   height: auto;
-  border-radius: 40px 0px 0px 40px;
-  background: #433DA0;
 }
-.homecontent-wrapper .inspiratie-wrapper .tiles-container img {
+.homecontent-wrapper .inspiratie-wrapper .tiles img {
   width: 250px;
   height: 250px;
-  border-radius: 10px;
   padding: 10px;
   -o-object-fit: contain;
      object-fit: contain;
