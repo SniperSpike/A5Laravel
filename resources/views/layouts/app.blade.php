@@ -22,7 +22,6 @@
     <link href="{{ asset('css/homecontent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
-
 </head>
 <body>
     <div id="app">
