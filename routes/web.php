@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/bandinfo', [App\Http\Controllers\BandInfoController::class, 'index'])->name('bandinfo');
-
+Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('verkennen');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
