@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/homecontent.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

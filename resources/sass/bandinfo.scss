@@ -1,0 +1,29 @@
+.bandInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .banner {
+        display: block;
+        width: 100%;
+        height: 40vh;
+        border-radius: 20px;
+        background-color: green;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        .bio,
+        .muziek {
+            width: 50%;
+            height: 40vh;
+        }
+
+        .bio {
+            background-color: purple;
+        }
+        .muziek {
+            background-color: blue;
+        }
+    }
+}
