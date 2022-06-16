@@ -4,7 +4,7 @@
 <div class="container col-md-7 col-sm-12 bandInfoWrapper">
     <div class="banner">
         <h1>AC/DC</h1>
-        <img src="{{asset('images/banner.png')}}" alt="banner photo" />
+        <img src="{{asset('images/test/banner.png')}}" alt="banner photo" />
     </div>
     <div class="info">
         <div class="bio">

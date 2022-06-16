@@ -21,6 +21,8 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/homecontent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -39,7 +41,7 @@
                         <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
-                        <li class="nav-item {{ Request::is('/verkennen') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('verkennen') ? 'active' : '' }}">
                             <a class="nav-link" href="#">{{ __('Verkennen') }}</a>
                         </li>
                     </ul>
@@ -62,7 +64,7 @@
                                 </li>
                             @endif --}}
                         @else
-                            <li class="nav-item {{ Request::is('/dashboard') ? 'active' : '' }}">
+                            <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
                             </li>
                             <li class="nav-item dropdown">
