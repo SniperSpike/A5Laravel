@@ -51,6 +51,7 @@
     width: 100%;
     height: auto;
     margin-top: 5em;
+    margin-bottom: 5em;
     // border: 2px solid black;
 
     .tiles-container {
@@ -59,7 +60,7 @@
       align-items: center;
       flex-wrap: wrap;
       width: 1366px;
-      height: 758px;
+      height: auto;
       border-radius: 40px 0px 0px 40px;
       background: #433DA0;
 
