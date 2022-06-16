@@ -1,6 +1,6 @@
 .homecontent-wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   margin: auto;
 }
 .homecontent-wrapper .personalised-wrapper {
@@ -11,14 +11,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  min-height: 30vh;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 2em;
 }
 .homecontent-wrapper .personalised-wrapper img {
-  width: 100%;
-  height: 50vh;
+  width: 1085px;
+  height: 583px;
 }
 .homecontent-wrapper .about-wrapper {
   display: -webkit-box;
@@ -34,19 +34,19 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  min-height: 30vh;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
   margin-top: 5em;
 }
 .homecontent-wrapper .about-wrapper article {
-  width: 35vw;
-  height: 50vh;
+  width: 643px;
+  height: 468px;
   margin-top: 2em;
 }
 .homecontent-wrapper .about-wrapper img {
-  width: 35vw;
-  height: 50vh;
+  width: 523px;
+  height: 533px;
 }
 .homecontent-wrapper .inspiratie-wrapper {
   display: -webkit-box;
@@ -56,7 +56,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  min-height: 50vh;
+  height: auto;
   margin-top: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
@@ -71,8 +71,8 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 75vw;
-  height: 75vh;
+  width: 1366px;
+  height: 758px;
   border-radius: 40px 0px 0px 40px;
   background: #433DA0;
 }

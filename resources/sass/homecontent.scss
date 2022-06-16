@@ -4,7 +4,7 @@
 
 .homecontent-wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   margin: auto;
   // border: 2px solid black;
 
@@ -12,14 +12,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 30vh;
+    height: auto;
     // border: 2px solid black;
     object-fit: cover;
     margin-top: 2em;
 
     img {
-      width: 100%;
-      height: 50vh;
+      width: 1085px;
+      height: 583px;
     }
   }
   .about-wrapper {
@@ -28,20 +28,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 30vh;
+    height: auto;
     object-fit: contain;
     margin-top: 5em;
     // border: 2px solid black;
 
     article {
-      width: 35vw;
-      height: 50vh;
+      width: 643px;
+      height: 468px;
       margin-top: 2em;
     }
 
     img {
-      width: 35vw;
-      height: 50vh;
+      width: 523px;
+      height: 533px;
     }
   }
 
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    min-height: 50vh;
+    height: auto;
     margin-top: 5em;
     // border: 2px solid black;
 
@@ -58,8 +58,8 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      width: 75vw;
-      height: 75vh;
+      width: 1366px;
+      height: 758px;
       border-radius: 40px 0px 0px 40px;
       background: #433DA0;
 
