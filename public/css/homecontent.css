@@ -47,3 +47,20 @@
   width: 523px;
   height: 533px;
 }
+.homecontent-wrapper .inspiratie-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  min-height: 30vh;
+  margin-top: 3em;
+}
+.homecontent-wrapper .inspiratie-wrapper .tiles {
+  width: 1366px;
+  height: 758px;
+  border-radius: 40px 0px 0px 40px;
+  background: #433DA0;
+}

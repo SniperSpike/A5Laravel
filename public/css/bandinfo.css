@@ -6,14 +6,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1em;
+  gap: 2em;
+  margin-top: -1em;
 }
 .bandInfoWrapper .banner {
   display: block;
   width: 100%;
-  height: 40vh;
+  max-height: 40vh;
   border-radius: 20px;
-  background-color: green;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.bandInfoWrapper .banner img {
+  width: 100%;
 }
 .bandInfoWrapper .info {
   display: -webkit-box;
@@ -22,15 +28,44 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 5em;
 }
 .bandInfoWrapper .info .bio,
 .bandInfoWrapper .info .muziek {
   width: 50%;
   height: 40vh;
 }
-.bandInfoWrapper .info .bio {
-  background-color: purple;
+.bandInfoWrapper .info .bio h2,
+.bandInfoWrapper .info .muziek h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #433da0;
 }
-.bandInfoWrapper .info .muziek {
-  background-color: blue;
+.bandInfoWrapper .info .bio p {
+  color: #1a2542;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+    gap: unset !important;
+  }
+
+  .bio,
+.muziek {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .bio p,
+.muziek p {
+    font-size: 1em !important;
+  }
 }
