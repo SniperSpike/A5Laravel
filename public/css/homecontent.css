@@ -17,6 +17,99 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.homecontent-wrapper .personalised-wrapper .cta-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Berlin Sans FB;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #adaabb;
+  padding: 0.5em;
+  background-color: #ffffff;
+  margin-bottom: -11em;
+  margin-top: 6em;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar button {
+  background-color: #433da0;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: unset;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input {
+  border: unset;
+  width: 100%;
+  color: #adaabb;
+  font-size: 17px;
+  padding-left: 1em;
+  font-family: Berlin Sans FB;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-webkit-input-placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-moz-placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input:-ms-input-placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-ms-input-placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input:focus {
+  outline: none;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .cta-btn {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 20px;
+  color: black;
+  background: #ffffff;
+  font-size: 22px;
+  margin-top: 2em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .cta-btn:hover {
+  background: #e6e6e6;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container h1 {
+  width: 70%;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  font-size: 45px;
+}
 .homecontent-wrapper .personalised-wrapper img {
   width: 100%;
   max-width: 1060px;

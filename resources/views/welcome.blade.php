@@ -3,7 +3,17 @@
 @section('content')
 <div class="homecontent-wrapper">
     <div class="personalised-wrapper">
-        <img src="{{asset('images/calltoaction.svg')}}" alt="">
+        <div class="cta-container">
+            <h1>Gepersonaliseerde persmap met één druk op de knop! </h1>
+            <button class="cta-btn">Aan de slag</button>
+            <div class="searchBar">
+                <input type="text" placeholder="Zoek door onze bibliotheek...">
+                <button>
+                    <img src="{{asset('images/search.svg')}}" />
+                </button>
+            </div>
+        </div>
+        <img src="{{asset('images/calltoaction.svg')}}" alt="cta-banner">
     </div>
 
     <div class="about-wrapper">

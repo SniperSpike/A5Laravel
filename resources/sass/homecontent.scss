@@ -19,6 +19,71 @@
         object-fit: cover;
         // margin-top: 2em;
 
+        .cta-container {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            flex-direction: column;
+            font-family: Berlin Sans FB;
+
+            .searchBar {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                margin: 0 auto;
+                border-radius: 10px;
+                border: 1px solid $secondaryColor;
+                padding: 0.5em;
+                background-color: #ffffff;
+                margin-bottom: -11em;
+                margin-top: 6em;
+                button {
+                    background-color: $primaryColor;
+                    padding: 0.5em;
+                    border-radius: 10px;
+                    border: unset;
+                }
+                input {
+                    border: unset;
+                    width: 100%;
+                    color: $secondaryColor;
+                    font-size: 17px;
+                    padding-left: 1em;
+                    font-family: Berlin Sans FB;
+                    &::placeholder {
+                        color: $secondaryColor;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .cta-btn {
+                padding: 0.6em 1.2em;
+                border: none;
+                border-radius: 20px;
+                color: black;
+                background: #ffffff;
+                font-size: 22px;
+                margin-top: 2em;
+                transition: all 0.3s;
+                &:hover {
+                    background: darken(#ffffff, 10%);
+                }
+            }
+            h1 {
+                width: 70%;
+                text-align: center;
+                color: white;
+                font-weight: normal;
+                font-size: 45px;
+            }
+        }
         img {
             width: 100%;
             max-width: 1060px;
