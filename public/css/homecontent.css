@@ -243,6 +243,10 @@
     border-radius: 0px !important;
   }
 
+  .cta-container .searchBar {
+    margin-bottom: 0 !important;
+    margin-top: 1em !important;
+  }
   .cta-container h1 {
     font-size: 1.5rem !important;
   }
@@ -252,7 +256,7 @@
   .cta-container input {
     width: 100% !important;
     position: relative;
-    top: -10%;
+    font-size: 14px;
   }
 
   .about-wrapper article {
@@ -271,7 +275,9 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
     padding: 0px !important;
-    font-size: 1.5rem;
+  }
+  .inspiratie-wrapper h1 {
+    font-size: 2rem !important;
   }
   .inspiratie-wrapper .tiles-container {
     background: #433da0 !important;

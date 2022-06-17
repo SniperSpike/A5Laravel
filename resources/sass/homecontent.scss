@@ -202,6 +202,7 @@
 }
 
 @media only screen and (max-width: $breakpoint-small-screen) {
+    
 
     .personalised-wrapper {
         img {
@@ -210,6 +211,11 @@
     }
 
     .cta-container {
+
+        .searchBar {
+            margin-bottom: 0 !important;
+            margin-top: 1em !important;
+        }
 
         h1 {
             font-size: 1.5rem !important;
@@ -222,7 +228,8 @@
         input {
             width: 100% !important;
             position: relative;
-            top: -10%;
+            font-size: 14px;
+
         }
     }
 
@@ -241,8 +248,11 @@
         display: flex;
         justify-content: center !important;
         padding: 0px !important;
-        font-size: 1.5rem;
-        
+
+        h1 {
+            font-size: 2rem !important;
+        }
+
         .tiles-container {
             background: $primaryColor !important;
             border-radius: 0px !important;
