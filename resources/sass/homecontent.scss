@@ -101,14 +101,14 @@
         object-fit: contain;
         margin-top: 5em;
         gap: 8em;
-        margin-left: 8em;
         // border: 2px solid black;
 
         article {
-            width: 643px;
-            height: 468px;
+            width: 30%;
+            height: auto;
             font-family: Berlin Sans FB;
             // margin-top: 2em;
+            // border: 2px solid black;
             h1 {
                 font-weight: normal;
                 color: $fontColor;
@@ -139,18 +139,18 @@
         .tiles-container {
             background: linear-gradient(45deg, $primaryColor, #91528d);
             border-radius: 50px 0px 0px 50px;
-            padding: 10px;
             color: $backgroundColor;
             display: flex;
             justify-items: center;
             align-items: center;
             flex-wrap: wrap;
+            padding: 40px 40px 40px 40px;
             width: 1366px;
             height: auto;
-            padding: 5em;
 
             h1 {
                 font-size: 50px;
+                padding: 20px 20px 20px 20px;
                 font-weight: normal;
                 font-family: Berlin Sans FB;
                 margin-bottom: 1em;
@@ -165,6 +165,7 @@
                     width: 210px;
                     height: 210px;
                     object-fit: contain;
+                    border-radius: 20px;
                 }
             }
         }
@@ -199,16 +200,27 @@
 }
 
 @media only screen and (max-width: $breakpoint-small-screen) {
-    .about-wrapper img {
-        display: none;
+    .about-wrapper {
+        article {
+            width: 100% !important;
+        }
+
+        img {
+            display: none !important;
+        }
     }
+
     .inspiratie-wrapper {
         display: flex;
         justify-content: center !important;
+        padding: 0px 0px 0px 0px !important;
+        
         .tiles-container {
             background: $primaryColor !important;
             border-radius: 0px !important;
             justify-content: center !important;
+            padding: 0px 0px 0px 0px !important;
+            // border: 2px solid black;
         }
     }
 }

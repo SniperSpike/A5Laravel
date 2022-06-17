@@ -135,11 +135,10 @@
      object-fit: contain;
   margin-top: 5em;
   gap: 8em;
-  margin-left: 8em;
 }
 .homecontent-wrapper .about-wrapper article {
-  width: 643px;
-  height: 468px;
+  width: 30%;
+  height: auto;
   font-family: Berlin Sans FB;
 }
 .homecontent-wrapper .about-wrapper article h1 {
@@ -173,7 +172,6 @@
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
   background: linear-gradient(45deg, #433da0, #91528d);
   border-radius: 50px 0px 0px 50px;
-  padding: 10px;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,12 +182,13 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 40px 40px 40px 40px;
   width: 1366px;
   height: auto;
-  padding: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container h1 {
   font-size: 50px;
+  padding: 20px 20px 20px 20px;
   font-weight: normal;
   font-family: Berlin Sans FB;
   margin-bottom: 1em;
@@ -207,6 +206,7 @@
   height: 210px;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 20px;
 }
 .homecontent-wrapper .interesse-wrapper {
   display: -webkit-box;
@@ -241,8 +241,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .about-wrapper article {
+    width: 100% !important;
+  }
   .about-wrapper img {
-    display: none;
+    display: none !important;
   }
 
   .inspiratie-wrapper {
@@ -252,6 +255,7 @@
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+    padding: 0px 0px 0px 0px !important;
   }
   .inspiratie-wrapper .tiles-container {
     background: #433da0 !important;
@@ -259,5 +263,6 @@
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+    padding: 0px 0px 0px 0px !important;
   }
 }
