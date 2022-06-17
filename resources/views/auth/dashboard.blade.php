@@ -6,7 +6,7 @@
     <h3>Mijn Bands</h3>
     <div class="bandListContainer">
         @for ($i = 0; $i < 1; $i++) 
-        <a href="{{ route('bandinfo')}}">
+        <a href="{{ route('edit')}}">
             <div class="bandItem">
                 <p>AC/DC</p>
                 <img src="{{ asset('images/test/dashboardBanner.png')}}" alt="">
