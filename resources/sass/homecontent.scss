@@ -41,6 +41,7 @@
                 background-color: #ffffff;
                 margin-bottom: -11em;
                 margin-top: 6em;
+        
                 button {
                     background-color: $primaryColor;
                     padding: 0.5em;
@@ -177,14 +178,16 @@
         flex-wrap: wrap;
         width: 100%;
         height: auto;
+        // border: 2px solid black;
 
         .interesse  {
             
-            width: 37%;
+            width: 50%;
             height: auto;
             font-size: 22px;
             font-family: Berlin Sans FB;
             text-align: center;
+            margin: 40px 40px 40px 40px;
 
             a {
                 font-size: 22px;
@@ -192,8 +195,8 @@
                 text-decoration: none;
                 color: $backgroundColor;
                 background: $primaryColor;
-                padding: 20px;
-                margin: 30px;
+                padding: 20px 20px 20px 20px;
+                margin: 20px 20px 20px 20px;
             }
         }
     }
@@ -221,6 +224,12 @@
             justify-content: center !important;
             padding: 0px 0px 0px 0px !important;
             // border: 2px solid black;
+        }
+    }
+
+    .interesse {
+        a {
+            font-size: 19px !important;
         }
     }
 }

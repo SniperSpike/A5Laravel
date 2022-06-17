@@ -224,11 +224,12 @@
   height: auto;
 }
 .homecontent-wrapper .interesse-wrapper .interesse {
-  width: 37%;
+  width: 50%;
   height: auto;
   font-size: 22px;
   font-family: Berlin Sans FB;
   text-align: center;
+  margin: 40px 40px 40px 40px;
 }
 .homecontent-wrapper .interesse-wrapper .interesse a {
   font-size: 22px;
@@ -236,8 +237,8 @@
   text-decoration: none;
   color: #ffffff;
   background: #433da0;
-  padding: 20px;
-  margin: 30px;
+  padding: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -264,5 +265,9 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
     padding: 0px 0px 0px 0px !important;
+  }
+
+  .interesse a {
+    font-size: 19px !important;
   }
 }
