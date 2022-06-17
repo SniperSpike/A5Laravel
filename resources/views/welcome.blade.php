@@ -37,6 +37,7 @@
             </div>
         </div>
     </div>
+    @if (!Auth::check()))
     <div class="interesse-wrapper">
         <div class="interesse">
             <h1>Geïnteresseerd?</h1>
@@ -45,4 +46,5 @@
         </div>
     </div>
 </div>
+    @endif
 @endsection
