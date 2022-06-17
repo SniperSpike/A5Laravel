@@ -166,8 +166,8 @@
           align-items: center;
   width: 100%;
   height: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
   background: linear-gradient(45deg, #433da0, #91528d);
@@ -218,8 +218,6 @@
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
   height: auto;
 }
@@ -229,7 +227,7 @@
   font-size: 22px;
   font-family: Berlin Sans FB;
   text-align: center;
-  margin: 40px 40px 40px 40px;
+  margin-bottom: 5em;
 }
 .homecontent-wrapper .interesse-wrapper .interesse a {
   font-size: 22px;
@@ -237,11 +235,25 @@
   text-decoration: none;
   color: #ffffff;
   background: #433da0;
-  padding: 20px 20px 20px 20px;
-  margin: 20px 20px 20px 20px;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 1024px) {
+  .personalised-wrapper img {
+    border-radius: 0px !important;
+  }
+
+  .cta-container h1 {
+    font-size: 1.5rem !important;
+  }
+  .cta-container button {
+    font-size: 1rem !important;
+  }
+  .cta-container input {
+    width: 100% !important;
+    position: relative;
+  }
+
   .about-wrapper article {
     width: 100% !important;
   }
@@ -256,7 +268,8 @@
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
-    padding: 0px 0px 0px 0px !important;
+    padding: 0px !important;
+    font-size: 1.5rem;
   }
   .inspiratie-wrapper .tiles-container {
     background: #433da0 !important;

@@ -5,7 +5,12 @@
     <div class="personalised-wrapper">
         <div class="cta-container">
             <h1>Gepersonaliseerde persmap met één druk op de knop! </h1>
-            <button class="cta-btn">Aan de slag</button>
+            @if(!Auth::check())
+            <a href="{{route('register')}}"><button class="cta-btn">Aan de slag</button></a>
+            @endif
+            @if(Auth::check())
+            <a href="{{route('dashboard')}}"><button class="cta-btn">Naar dashboard</button></a>
+            @endif 
             <div class="searchBar">
                 <input type="text" placeholder="Zoek door onze bibliotheek...">
                 <button>
@@ -45,6 +50,6 @@
             <a href="{{route('register')}}">Meld je gratis aan</a>
         </div>
     </div>
-</div>
     @endif
+</div>
 @endsection
