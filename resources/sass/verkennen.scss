@@ -64,3 +64,14 @@
         }
     }
 }
+@media (max-width: $breakpoint-tablet) {
+    .searchBar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .verkenItems {
+        gap: 0 !important;
+    }
+}

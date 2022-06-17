@@ -11,7 +11,7 @@
     <h3>Onze bibliotheek</h3>
     <div class="verkenItems">
         @for ($i = 0; $i < 10; $i++)
-            <a href="#">
+            <a href="{{route('bandinfo')}}">
                 <div class="itemContainer">
                     <div class="item">
                     </div>
