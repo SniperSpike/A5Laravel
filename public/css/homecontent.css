@@ -281,6 +281,10 @@
             justify-content: center !important;
     padding: 0px !important;
   }
+  .inspiratie-wrapper .tiles-container .tiles img {
+    border-radius: 0px !important;
+    padding: 10px !important;
+  }
 
   .interesse a {
     font-size: 19px !important;
