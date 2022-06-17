@@ -23,6 +23,7 @@
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
     <link href="{{ asset('css/verkennen.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/edit.css')}}" rel="stylesheet">
 
 </head>
 <body>

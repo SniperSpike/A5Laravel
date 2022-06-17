@@ -18,4 +18,5 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/homecontent.scss", "public/css")
     .sass("resources/sass/bandinfo.scss", "public/css")
     .sass("resources/sass/dashboard.scss", "public/css")
-    .sass("resources/sass/verkennen.scss", "public/css");
+    .sass("resources/sass/verkennen.scss", "public/css")
+    .sass("resources/sass/edit.scss", "public/css");

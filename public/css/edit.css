@@ -1,0 +1,84 @@
+.editWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  margin-top: -1em;
+  margin-bottom: 5em;
+}
+.editWrapper .banner {
+  display: block;
+  width: 100%;
+  max-height: 40vh;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.editWrapper .banner img {
+  width: 100%;
+}
+.editWrapper .banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4em;
+  text-shadow: 3px 2px #1a2542;
+}
+.editWrapper .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5em;
+}
+.editWrapper .info .bio,
+.editWrapper .info .muziek {
+  width: 50%;
+  min-height: 40vh;
+}
+.editWrapper .info .bio h2,
+.editWrapper .info .muziek h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #433da0;
+}
+.editWrapper .info .bio p {
+  color: #1a2542;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+@media (max-width: 1200px) {
+  .editWrapper .info {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+    gap: unset !important;
+  }
+  .editWrapper .bio,
+.editWrapper .muziek {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .editWrapper .bio p,
+.editWrapper .muziek p {
+    font-size: 1em !important;
+  }
+  .editWrapper .banner h1 {
+    font-size: 3em !important;
+  }
+}
