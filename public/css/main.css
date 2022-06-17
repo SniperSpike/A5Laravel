@@ -21,7 +21,9 @@
 
 footer {
   height: 70px;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   bottom: 0;
   left: 0;

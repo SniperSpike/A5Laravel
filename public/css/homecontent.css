@@ -166,8 +166,8 @@
           align-items: center;
   width: 100%;
   height: auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
   background: linear-gradient(45deg, #433da0, #91528d);
