@@ -37,5 +37,12 @@
             </div>
         </div>
     </div>
+    <div class="interesse-wrapper">
+        <div class="interesse">
+            <h1>Geïnteresseerd?</h1>
+            <p>Maak dan nu een account en begin met het ontwerpen van jouw ideale penmap!</p>
+            <a href="{{route('register')}}">Meld je gratis aan</a>
+        </div>
+    </div>
 </div>
 @endsection

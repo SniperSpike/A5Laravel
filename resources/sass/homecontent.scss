@@ -169,7 +169,35 @@
             }
         }
     }
+    .interesse-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+
+        .interesse  {
+            
+            width: 37%;
+            height: auto;
+            font-size: 22px;
+            font-family: Berlin Sans FB;
+            text-align: center;
+
+            a {
+                font-size: 22px;
+                border-radius: 40px;
+                text-decoration: none;
+                color: $backgroundColor;
+                background: $primaryColor;
+                padding: 20px;
+                margin: 30px;
+            }
+        }
+    }
 }
+
 @media only screen and (max-width: $breakpoint-small-screen) {
     .about-wrapper img {
         display: none;

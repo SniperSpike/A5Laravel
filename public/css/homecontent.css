@@ -208,6 +208,37 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.homecontent-wrapper .interesse-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+.homecontent-wrapper .interesse-wrapper .interesse {
+  width: 37%;
+  height: auto;
+  font-size: 22px;
+  font-family: Berlin Sans FB;
+  text-align: center;
+}
+.homecontent-wrapper .interesse-wrapper .interesse a {
+  font-size: 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #433da0;
+  padding: 20px;
+  margin: 30px;
+}
 
 @media only screen and (max-width: 1024px) {
   .about-wrapper img {
