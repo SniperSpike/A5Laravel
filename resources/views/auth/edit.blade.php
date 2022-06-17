@@ -45,13 +45,11 @@
                     </div>
                     <div class="contentBox">
                         <div class="colorContainer">
-                            <div class="colorBox" style="background-color: #ffffff;"></div>
-                            <input type="text" id="backgroundColor" name="backgroundColor" value="#FFFFFF">
+                            <input type="color" class=" colorPicker" id="achtergrondColor" value="#FFFFFF" title="Choose your color">
                             <h3>Achtergrond kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <div class="colorBox" style="background-color: #433DA0;"></div>
-                            <input type="text" id="textColor" name="textColor" value="#433DA0">
+                            <input type="color" class=" colorPicker" id="textColor" value="#433DA0" title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
                     </div>
