@@ -1,3 +1,185 @@
+.navbar {
+  z-index: 100;
+}
+
+#app {
+  position: relative;
+}
+
+footer {
+  z-index: 300;
+}
+
+#overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+  width: 350px;
+  background-color: rgba(67, 61, 160, 0.86);
+  z-index: 200;
+}
+#overlay .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6em;
+}
+#overlay .top .settingsBox {
+  margin-bottom: 2em;
+}
+#overlay .top .settingsBox .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1em;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+#overlay .top .settingsBox .header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+#overlay .top .settingsBox .contentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.5em;
+}
+#overlay .top .settingsBox .contentBox .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Arial;
+}
+#overlay .top .settingsBox .contentBox .inputBox label {
+  color: #adaabb;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: -0.4em;
+  margin-left: 2px;
+}
+#overlay .top .settingsBox .contentBox .inputBox input {
+  color: white;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #adaabb;
+  width: 100%;
+  font-size: 18px;
+}
+#overlay .top .settingsBox .contentBox .inputBox input:focus {
+  outline: none;
+}
+#overlay .top .settingsBox .contentBox .colorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  margin-bottom: 0.8em;
+}
+#overlay .top .settingsBox .contentBox .colorContainer .colorBox {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+#overlay .top .settingsBox .contentBox .colorContainer input {
+  color: white;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #adaabb;
+  width: 70px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+#overlay .top .settingsBox .contentBox .colorContainer input:focus {
+  outline: none;
+}
+#overlay .top .settingsBox .contentBox .colorContainer h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+#overlay .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 70px;
+}
+#overlay .bottom .editBtn {
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial;
+  border: none;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+#overlay .bottom .btn-opslaan {
+  color: #433da0;
+  background-color: #fff;
+}
+#overlay .bottom .btn-opslaan:hover {
+  background-color: #e6e6e6;
+}
+#overlay .bottom .btn-annuleren {
+  color: #fff;
+  background-color: #433da0;
+}
+#overlay .bottom .btn-annuleren:hover {
+  background-color: #4b44b2;
+}
+
 .editWrapper {
   display: -webkit-box;
   display: -ms-flexbox;

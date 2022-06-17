@@ -1,6 +1,148 @@
 // Variables
 @import "variables";
 
+.navbar {
+    z-index: 100;
+}
+
+#app {
+    position: relative;
+}
+
+footer {
+    z-index: 300;
+}
+
+#overlay {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em;
+    width: 350px;
+    background-color: rgba($color: #433da0, $alpha: 0.86);
+    z-index: 200;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6em;
+
+        .settingsBox {
+            margin-bottom: 2em;
+            .header {
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                align-self: center;
+                h3 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: Arial;
+                    color: white;
+                    margin: 0;
+                    line-height: 1.5;
+                }
+            }
+            .contentBox {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0.5em;
+                .inputBox {
+                    display: flex;
+                    flex-direction: column;
+                    font-family: Arial;
+                    label {
+                        color: $secondaryColor;
+                        font-weight: bold;
+                        padding: 0;
+                        margin-bottom: -0.4em;
+                        margin-left: 2px;
+                    }
+                    input {
+                        color: white;
+                        background-color: inherit;
+                        border: none;
+                        border-bottom: 1px solid $secondaryColor;
+                        width: 100%;
+                        font-size: 18px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .colorContainer {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1em;
+                    margin-bottom: 0.8em;
+                    .colorBox {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        border: 1px solid rgba($color: #000000, $alpha: 0.25);
+                    }
+                    input {
+                        color: white;
+                        background-color: inherit;
+                        border: none;
+                        border-bottom: 1px solid $secondaryColor;
+                        width: 70px;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 15px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    h3 {
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1em;
+        margin-bottom: 70px;
+
+        .editBtn {
+            border-radius: 10px;
+            padding: 0.5em 2em;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Arial;
+            border: none;
+            box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+        }
+        .btn-opslaan {
+            color: $primaryColor;
+            background-color: #fff;
+            &:hover {
+                background-color: darken(#fff, 10%);
+            }
+        }
+        .btn-annuleren {
+            color: #fff;
+            background-color: $primaryColor;
+            &:hover {
+                background-color: lighten($primaryColor, 5%);
+            }
+        }
+    }
+}
+
 .editWrapper {
     display: flex;
     flex-direction: column;
