@@ -9,7 +9,7 @@
         </button>
     </div> --}}
     <form action="{{route('verkennen')}}" class="searchBar">
-        <input type="text" name="search" placeholder="Zoek door onze bibliotheek...">
+        <input type="text" name="query" placeholder="Zoek door onze bibliotheek...">
         <button>
             <img src="{{asset('images/search.svg')}}" alt="">
         </button>

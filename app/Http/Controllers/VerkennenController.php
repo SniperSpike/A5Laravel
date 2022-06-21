@@ -13,10 +13,10 @@ class VerkennenController extends Controller
      */
     public function index()
     {
-        return view('verkennen');
 
-        if(request()->query('search')) {
-            dd(request()->query('search'));
+        if(request()->query('query')) {
+            dd(request()->query('query'));
         }
+        return view('verkennen');
     }
 }
