@@ -8,6 +8,7 @@
             <img src="{{asset('images/search.svg')}}" />
         </button>
     </div> --}}
+    {{-- LATER VOOR DATABSE  (Bronvideo: https://www.youtube.com/watch?v=CKwSW3sEIp8&ab_channel=EasyLearning) --}}
     <form action="{{route('verkennen')}}" class="searchBar">
         <input type="text" name="query" placeholder="Zoek door onze bibliotheek...">
         <button>
