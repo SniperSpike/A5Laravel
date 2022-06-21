@@ -215,7 +215,7 @@
 </body>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.js"></script>
 <script>
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -257,15 +257,15 @@
             }
         }
     });
-    // $('#basicExample').on('shown.bs.modal', function () {
-    //     cropper = new Cropper(image, {
-    //         aspectRatio: 1,
-    //         viewMode: 1,
-    //     });
-    // }).on('hidden.bs.modal', function () {
-    //     cropper.destroy();
-    //     cropper = null;
-    // });
+    $('#basicExample').on('shown.bs.modal', function () {
+        cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 1,
+        });
+    }).on('hidden.bs.modal', function () {
+        cropper.destroy();
+        cropper = null;
+    });
 
 </script>
 
