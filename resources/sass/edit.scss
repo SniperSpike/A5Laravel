@@ -130,6 +130,10 @@ footer {
     }
 }
 
+#popupBtn {
+    display: none;
+}
+
 .editWrapper {
     display: flex;
     flex-direction: column;
@@ -138,6 +142,12 @@ footer {
 
     // fixt footer probleem
     margin-bottom: 5em;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
     .banner {
         display: block;
         width: 100%;

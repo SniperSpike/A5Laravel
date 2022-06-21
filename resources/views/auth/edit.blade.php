@@ -141,6 +141,37 @@
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
+        
+                            <!-- Button trigger modal -->
+                            <button type="button" id="popupBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Launch demo modal
+                            </button>
+                      
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="img-container">
+                                        <div class="row">
+                                            <div class="col-mid-11">
+                                                <img id="image" src="" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -173,100 +204,75 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div> --}}
-                    </div>
+        
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal imagecrop" id="basicExample" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="img-container">
-                            <div class="row">
-                                <div class="col-mid-11">
-                                    <img id="image" src="" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-                </div>
-            </div>
+
+
             <footer>
                 <span>Copyright © 2022</span>
             </footer>
         </main>
     </div>
-    {{-- <div class="img-container">
-        <div class="row">
-            <div class="col-mid-11">
-                <img id="image" src="" alt="">
-            </div>
-        </div>
-    </div> --}}
 </body>
 <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.js"></script>
 <script>
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            let reader = new FileReader();
-            reader.onload = function (e) {
-                $('#bandBanner').css('background', 'url(' + e.target.result + ') no-repeat center center');
+    $('documment').ready(function() {
+        const $modal = $('#exampleModal');
+        const image = document.getElementById('image');
+        let cropper;
+        
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#bandBanner').css('background', 'url(' + e.target.result + ') no-repeat center center');
+                }
+                reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(input.files[0]);
         }
-    }
-    $('#editBanner').change(function () {
-        readURL(this);
+        $('#editBanner').change(function () {
+            readURL(this);
+        })
+
+        $("body").on("change", "#editBanner", function (e) {
+            var files = e.target.files;
+            var done = function (url) {
+                image.src = url;
+                $('#popupBtn').click();
+                console.log(url);
+            };
+            var reader;
+            var file;
+            var url;
+            if (files && files.length > 0) {
+                file = files[0];
+                if (URL) {
+                    done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                    reader = new FileReader();
+                    reader.onload = function (e) {
+                        done(reader.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+
+        var myModal = document.getElementById('exampleModal')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            cropper = new Cropper(image, {
+                aspectRatio: 19 / 8,
+                viewMode: 3,
+            });
+        })
+        myModal.addEventListener('hidden.bs.modal', function () {
+            cropper.destroy();
+            cropper = null;
+        })
     })
 </script>
-<script>
-    const $modal = $('.imagecrop');
-    const image = document.getElementById('image');
-    let cropper;
-    $("body").on("change", "#editBanner", function (e) {
-        var files = e.target.files;
-        var done = function (url) {
-            image.src = url;
-            $('#basicExample').show();
-            console.log(url);
-        };
-        var reader;
-        var file;
-        var url;
-        if (files && files.length > 0) {
-            file = files[0];
-            if (URL) {
-                done(URL.createObjectURL(file));
-            } else if (FileReader) {
-                reader = new FileReader();
-                reader.onload = function (e) {
-                    done(reader.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-    });
-    $('#basicExample').on('shown.bs.modal', function () {
-        cropper = new Cropper(image, {
-            aspectRatio: 1,
-            viewMode: 1,
-        });
-    }).on('hidden.bs.modal', function () {
-        cropper.destroy();
-        cropper = null;
-    });
-
-</script>
-
 </html>
