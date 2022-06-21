@@ -9,9 +9,6 @@
 
     <title>{{ _('EPK Media')}}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -24,6 +21,7 @@
 </head>
 <body>
     <div id="app">
+        {{-- overlay voor edit opties --}}
         <div id="overlay">
             <div class="top">
                 <div class="settingsBox">
@@ -106,9 +104,12 @@
 
         <main class="py-4 footerfix">
             <div class="container col-md-7 col-sm-12 editWrapper">
-                <div class="banner">
+                <div id="bandBanner" class="banner" style="background:url({{url('images/test/banner.png')}}) no-repeat center center;">
                     <h1>AC/DC</h1>
-                    <img src="{{asset('images/test/banner.png')}}" alt="banner photo" />
+                    <div class="banner-edit">
+                        <input type="file" id="editBanner" accept=".png, .jpg, .jpeg"/>
+                        <label for="editBanner">Edit</label>
+                    </div>
                 </div>
                 <div class="info">
                     <div class="bio">
@@ -124,7 +125,7 @@
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                        {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
@@ -155,7 +156,7 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -163,7 +164,22 @@
                 <span>Copyright © 2022</span>
             </footer>
         </main>
-
     </div>
 </body>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+<script>
+    function readURL(input) {
+        if(input.files && input.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                $('#bandBanner').css('background', 'url(' + e.target.result + ') no-repeat center center');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#editBanner").change(function() {
+        readURL(this);
+    })
+</script>
 </html>

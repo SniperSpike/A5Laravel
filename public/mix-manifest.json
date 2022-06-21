@@ -1,6 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/css/bandinfo.css": "/css/bandinfo.css",
     "/css/homecontent.css": "/css/homecontent.css",
-    "/css/main.css": "/css/main.css"
+    "/css/main.css": "/css/main.css",
+    "/css/edit.css": "/css/edit.css",
+    "/css/verkennen.css": "/css/verkennen.css",
+    "/css/dashboard.css": "/css/dashboard.css"
 }
