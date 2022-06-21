@@ -14,8 +14,8 @@ class VerkennenController extends Controller
     public function index()
     {
 
-        if(request()->query('query')) {
-            dd(request()->query('query'));
+        if(request()->query('search')) {
+            dd(request()->query('search'));
         }
         return view('verkennen');
     }
