@@ -13,6 +13,15 @@ class VerkennenController extends Controller
      */
     public function index()
     {
+        // LATER VOOR DATABASE 
+
+        // $search = request()->query('search');
+
+        // if($search) {
+        //     $posts = Post::where('title', 'LIKE', "%{$search}%")->simplePaginate(3);
+        // } else {
+        //     $posts = Post::simplePaginate(3);
+        // }
         return view('verkennen');
     }
 }

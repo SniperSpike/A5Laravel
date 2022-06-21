@@ -10,7 +10,7 @@
             @endif
             @if(Auth::check())
             <a href="{{route('dashboard')}}"><button class="cta-btn">Naar dashboard</button></a>
-            @endif 
+            @endif
             <div class="searchBar">
                 <input type="text" placeholder="Zoek door onze bibliotheek...">
                 <button>
