@@ -222,6 +222,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
+    // in samenwerking met:
+    // - stack overflow 
+    // - VM Learning Hub (Youtuber)
+
     $('documment').ready(function () {
         const $modal = $('#exampleModal');
         const image = document.getElementById('image');
@@ -244,8 +248,8 @@
             var files = e.target.files;
             var done = function (url) {
                 image.src = url;
+                // scuffed fix omdat Ik in geen 100 jaar $('#modalnaam').modal('show') werkend kon krijgen. F**k Bootstrap v5.2
                 $('#popupBtn').click();
-                console.log(url);
             };
             var reader;
             var file;
