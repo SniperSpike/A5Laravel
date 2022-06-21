@@ -141,37 +141,39 @@
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" id="popupBtn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
         
-                            <!-- Button trigger modal -->
-                            <button type="button" id="popupBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                              Launch demo modal
-                            </button>
-                      
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                              <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <div class="img-container">
-                                        <div class="row">
-                                            <div class="col-mid-11">
-                                                <img id="image" src="" alt="">
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  
+                                <div class="modal-content modal-dialog modal-lg">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Band banner croppen</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="img-container">
+                                            <div class="row">
+                                                <div class="col-mid-11">
+                                                    <img id="image" src="" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                  </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-cropImage">Save changes</button>
+                                    </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
+                        </div>
                         {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -204,7 +206,8 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div> --}}
-        
+                    </div>
+
                 </div>
             </div>
 
@@ -219,11 +222,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
-    $('documment').ready(function() {
+    $('documment').ready(function () {
         const $modal = $('#exampleModal');
         const image = document.getElementById('image');
         let cropper;
-        
+
         function readURL(input) {
             if (input.files && input.files[0]) {
                 let reader = new FileReader();
@@ -267,6 +270,7 @@
             cropper = new Cropper(image, {
                 aspectRatio: 19 / 8,
                 viewMode: 3,
+                responsive: true,
             });
         })
         myModal.addEventListener('hidden.bs.modal', function () {
@@ -275,4 +279,5 @@
         })
     })
 </script>
+
 </html>

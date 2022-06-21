@@ -148,6 +148,29 @@ footer {
         max-width: 100%;
     }
 
+    .modal-content {
+        width: fit-content;
+    }
+
+    .btn-cropImage {
+        background-color: $primaryColor;
+        color: white;
+    }
+
+    .cropper-container {
+        max-width: 100% !important;
+    }
+
+    .cropper-point,
+    .cropper-line {
+        background-color: $primaryColor !important;
+    }
+
+    .cropper-view-box {
+        outline: 1px solid $primaryColor;
+        outline-color: rgba($color: $primaryColor, $alpha: 0.16);
+    }
+
     .banner {
         display: block;
         width: 100%;

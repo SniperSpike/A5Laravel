@@ -187,6 +187,26 @@ footer {
   display: block;
   max-width: 100%;
 }
+.editWrapper .modal-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.editWrapper .btn-cropImage {
+  background-color: #433da0;
+  color: white;
+}
+.editWrapper .cropper-container {
+  max-width: 100% !important;
+}
+.editWrapper .cropper-point,
+.editWrapper .cropper-line {
+  background-color: #433da0 !important;
+}
+.editWrapper .cropper-view-box {
+  outline: 1px solid #433da0;
+  outline-color: rgba(67, 61, 160, 0.16);
+}
 .editWrapper .banner {
   display: block;
   width: 100%;
