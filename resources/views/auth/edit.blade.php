@@ -170,7 +170,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-cropImage">Save changes</button>
+                                        <button id="crop" type="button" class="btn btn-cropImage" data-bs-dismiss="modal">Save changes</button>
                                     </div>
                                 </div>
                         </div>
@@ -277,6 +277,25 @@
             cropper.destroy();
             cropper = null;
         })
+
+        $('body').on('click', '#crop', function () {
+
+            canvas = cropper.getCroppedCanvas({
+                width: 1072,
+                height: 384,
+            });
+
+            canvas.toBlob(function (blob) {
+                url = URL.createObjectURL(blob);
+                reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function(){
+                    let base64data = reader.result;
+                    $('#bandBanner').css('background', 'url(' + base64data + ') no-repeat center center');
+                }
+            })
+        })
+
     })
 </script>
 
