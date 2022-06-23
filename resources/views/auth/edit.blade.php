@@ -285,8 +285,8 @@
         $('body').on('click', '#crop', function () {
 
             canvas = cropper.getCroppedCanvas({
-                width: 1072,
-                height: 384,
+                width: 1172,
+                height: 400,
             });
 
             canvas.toBlob(function (blob) {
