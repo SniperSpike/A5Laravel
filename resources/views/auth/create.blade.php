@@ -318,9 +318,13 @@
 
         $(".bio_edit").on('click', function(){
             if($('#bio_textarea').hasAttr("readonly")){
-                $('#bio_textarea').removeAttr('readonly').addClass('active');
+                $('#bio_textarea').removeAttr('readonly');
+                $('.bio_edit').addClass('active');
+                $('.bio_edit').html('Save');
             }else{
-                $('#bio_textarea').attr('readonly', true).removeClass('active');
+                $('#bio_textarea').attr('readonly', true);
+                $('.bio_edit').removeClass('active');
+                $('.bio_edit').html('Edit');
             }
 
         });
