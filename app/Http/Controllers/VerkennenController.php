@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Band;
+
+use App\Category;
+use App\Tag;
+use App\Post;
+
 
 class VerkennenController extends Controller
 {
@@ -11,17 +17,16 @@ class VerkennenController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        // LATER VOOR DATABASE 
+        $keyword = $request->keyword;
 
-        // $search = request()->query('search');
-
-        // if($search) {
-        //     $posts = Post::where('title', 'LIKE', "%{$search}%")->simplePaginate(3);
-        // } else {
-        //     $posts = Post::simplePaginate(3);
-        // }
-        return view('verkennen');
+        if(isset($keyword)) {
+            $bands = Band::bandSearch($keyword);
+        }
+        else {
+            $bands = Band::all();
+        }
+        return view('verkennen', compact('bands'));
     }
 }
