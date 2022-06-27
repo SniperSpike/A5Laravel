@@ -10,7 +10,7 @@
     </form>
     <h3>Onze bibliotheek</h3>
     <div class="verkenItems">
-        @for ($i = 0; $i < 10; $i++)
+        {{-- @for ($i = 0; $i < 10; $i++)
             <a href="{{route('bandinfo')}}">
                 <div class="itemContainer">
                     <div name="item" class="item">
@@ -18,7 +18,13 @@
                     <p id="bandname">AC/DC</p>
                 </div>
             </a>
-        @endfor
+        @endfor --}}
+
+        @foreach($band as $value)
+        <a href="{{url('bandinfo/'. $value->id)}}">
+            <p class="bandname">{{$value->bandnaam}}</p>
+        </a>
+        @endforeach
     </div>
 </div>
 @endsection

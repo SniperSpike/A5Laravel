@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Band;
+use Illuminate\Support\Facades\DB;
 
 use App\Category;
 use App\Tag;
@@ -17,8 +18,10 @@ class VerkennenController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
-    {
-        return view('verkennen');
+    public function index()
+    {   
+        $band = DB::table('bands')->get();
+
+        return view('verkennen', ['band' => $band]);
     }
 }
