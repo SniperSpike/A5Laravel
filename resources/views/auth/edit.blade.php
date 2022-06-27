@@ -26,6 +26,8 @@
 
 <body>
     <div id="app">
+        <form action="{{url('edit/submit')}}" method="POST">
+            @csrf
         {{-- overlay voor edit opties --}}
         <div id="overlay">
             <div class="top">
@@ -37,7 +39,7 @@
                     <div class="contentBox">
                         <div class="inputBox">
                             <label for="bandNaam" class="col-form-label">Band Naam</label>
-                            <input id="bandNaam" name="bandNaam" type="text" value="AC/DC">
+                            <input id="bandNaam" name="bandNaam" type="text">
                         </div>
                     </div>
                 </div>
@@ -67,18 +69,15 @@
                     <div class="contentBox">
                         <div class="inputBox">
                             <label for="video1" class="col-form-label">Video 1</label>
-                            <input id="video1" name="video1" type="text"
-                                value="https://www.youtube.com/embed/v2AC41dglnM">
+                            <input id="video1" name="video1" type="text">
                         </div>
                         <div class="inputBox">
                             <label for="video2" class="col-form-label">Video 2</label>
-                            <input id="video2" name="video2" type="text"
-                                value="https://www.youtube.com/embed/l482T0yNkeo">
+                            <input id="video2" name="video2" type="text">
                         </div>
                         <div class="inputBox">
                             <label for="video3" class="col-form-label">Video 3</label>
-                            <input id="video3" name="video3" type="text"
-                                value="https://www.youtube.com/embed/etAIpkdhU9Q">
+                            <input id="video3" name="video3" type="text">
                         </div>
                     </div>
                 </div>
@@ -130,8 +129,8 @@
         <main class="py-4 footerfix">
             <div class="container col-md-7 col-sm-12 editWrapper">
                 <div id="bandBanner" class="banner"
-                    style="background:url({{url('images/test/banner.png')}}) no-repeat center center;">
-                    <h1 id="band-title">AC/DC</h1>
+                    style="background:url({{url('images/placeholder.jpg')}}) no-repeat center center;">
+                    <h1 id="band-title"></h1>
                     <div class="banner-edit">
                         <input type="file" id="editBanner" accept=".png, .jpg, .jpeg" />
                         <label for="editBanner">Edit</label>
@@ -143,17 +142,7 @@
                             <h2>biographie</h2>
                             <span class="bio_edit active">Edit</span>
                         </header>
-                        <textarea id="bio_textarea" readonly>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-invidunt ut labore
-et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-dolores et ea
-rebum. Stet clita kasd gubergren, no sea takimata sanctus
-
-est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed
-diam nonumy
-eirmod tempor invidunt ut labore et dolore magna
-                        </textarea>
+                        <textarea id="bio_textarea" readonly>Druk op edit om de tekst aan te passen.</textarea>
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
@@ -233,6 +222,7 @@ eirmod tempor invidunt ut labore et dolore magna
             </footer>
         </main>
     </div>
+</form>
 </body>
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
@@ -258,11 +248,9 @@ eirmod tempor invidunt ut labore et dolore magna
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        $('#editBanner').change(function () {
-            readURL(this);
-        })
+      
 
-        $("body").on("change", "#editBanner", function (e) {
+        $('body').on("change", "#editBanner", function (e) {
             var files = e.target.files;
             var done = function (url) {
                 image.src = url;
@@ -314,6 +302,7 @@ eirmod tempor invidunt ut labore et dolore magna
                 reader.onloadend = function(){
                     let base64data = reader.result;
                     $('#bandBanner').css('background', 'url(' + base64data + ') no-repeat center center');
+                    readURL(base64data);
                 }
             })
         })

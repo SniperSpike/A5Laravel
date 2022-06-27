@@ -25,4 +25,8 @@ class EditController extends Controller
     {
         return view('auth.edit');
     }
+
+    public function submitForm(Request $req){
+        dd($req->all());
+    }
 }
