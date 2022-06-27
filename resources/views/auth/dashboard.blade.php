@@ -14,7 +14,9 @@
         </a>
         @endfor 
         <div class="addBandItem">
-            <img src="{{ asset('images/addBand.svg') }}" alt="Add Bands">
+            <a href="{{route('edit')}}">
+                <img src="{{ asset('images/addBand.svg') }}" alt="Add Bands">
+            </a>
         </div>
     </div>
 </div>
