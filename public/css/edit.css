@@ -29,6 +29,7 @@ footer {
   width: 350px;
   background-color: rgba(67, 61, 160, 0.86);
   z-index: 200;
+  overflow-y: auto;
 }
 #overlay .top {
   display: -webkit-box;
@@ -299,6 +300,9 @@ footer {
   height: 100%;
   overflow: hidden;
   border: none;
+}
+.editWrapper .info #bio_textarea:focus {
+  outline: none;
 }
 .editWrapper .info .bio_header {
   display: -webkit-box;

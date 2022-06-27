@@ -25,7 +25,7 @@ footer {
     width: 350px;
     background-color: rgba($color: #433da0, $alpha: 0.86);
     z-index: 200;
-
+    overflow-y: auto;
     .top {
         display: flex;
         flex-direction: column;
@@ -259,9 +259,9 @@ footer {
             height: 100%;
             overflow: hidden;
             border: none;
-            // &:focus{
-            //     outline: none;
-            // }
+            &:focus {
+                outline: none;
+            }
         }
         .bio_header {
             display: flex;
