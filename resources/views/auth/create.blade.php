@@ -26,7 +26,6 @@
 
 <body>
     <div id="app">
-        @foreach($band as $value)
         <form action="{{url('edit/submit')}}" method="POST">
             @csrf
         {{-- overlay voor edit opties --}}
@@ -40,7 +39,7 @@
                     <div class="contentBox">
                         <div class="inputBox">
                             <label for="bandNaam" class="col-form-label">Band Naam</label>
-                            <input id="bandNaam" name="bandNaam" type="text" value="{{$value->bandnaam}}" required>
+                            <input id="bandNaam" name="bandNaam" type="text" required>
                         </div>
                     </div>
                 </div>
@@ -51,12 +50,12 @@
                     </div>
                     <div class="contentBox">
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="achtergrondColor" value="{{$value->achtergrondkleur}}" 
+                            <input type="color" class=" colorPicker" name="textKleur" id="achtergrondColor" value="#FFFFFF"
                                 title="Choose your color">
                             <h3>Achtergrond kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="textKleur" id="textColor" value="{{$value->tekstkleur}}"
+                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="textColor" value="#433DA0"
                                 title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
@@ -70,15 +69,15 @@
                     <div class="contentBox">
                         <div class="inputBox">
                             <label for="video1" class="col-form-label">Video 1</label>
-                            <input id="video1" name="video1" type="text" value="{{$value->url1}}">
+                            <input id="video1" name="video1" type="text">
                         </div>
                         <div class="inputBox">
                             <label for="video2" class="col-form-label">Video 2</label>
-                            <input id="video2" name="video2" type="text" value="{{$value->url2}}">
+                            <input id="video2" name="video2" type="text">
                         </div>
                         <div class="inputBox">
                             <label for="video3" class="col-form-label">Video 3</label>
-                            <input id="video3" name="video3" type="text" value="{{$value->url3}}">
+                            <input id="video3" name="video3" type="text">
                         </div>
                     </div>
                 </div>
@@ -130,13 +129,11 @@
         <main class="py-4 footerfix">
             <div class="container col-md-7 col-sm-12 editWrapper">
                 <div id="bandBanner" class="banner"
-                    style="background:url({{$value->banner}}) no-repeat center center;">
-                    <h1 id="band-title">
-                        {{$value->bandnaam}}
-                    </h1>
+                    style="background:url({{url('images/placeholder.jpg')}}) no-repeat center center;">
+                    <h1 id="band-title"></h1>
                     <div class="banner-edit">
                         <input type="file" name="banner" id="editBanner" />
-                        <input type="hidden" name="base64data" id="base64data" value="{{$value->banner}}"/>
+                        <input type="hidden" name="base64data" id="base64data" />
                         <label for="editBanner">Edit</label>
                     </div>
                 </div>
@@ -146,7 +143,7 @@
                             <h2>biographie</h2>
                             <span class="bio_edit active">Edit</span>
                         </header>
-                        <textarea id="bio_textarea" name="biografie" readonly>{{$value->biografie}}</textarea>
+                        <textarea id="bio_textarea" name="biografie" readonly>Druk op edit om de tekst aan te passen.</textarea>
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
@@ -226,7 +223,6 @@
             </footer>
         </main>
     </div>
-    @endforeach
 </form>
 </body>
 <!-- Scripts -->

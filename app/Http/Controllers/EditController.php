@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Band;
+use Illuminate\Support\Facades\DB;
 
 class EditController extends Controller
 {
@@ -25,7 +26,12 @@ class EditController extends Controller
      */
     public function index()
     {
-        return view('auth.edit');
+        return view('auth.create', ['band' => []]);
+    }
+
+    public function editBand($id){
+        $band = DB::table('bands')->get()->where('id', '=', $id);
+        return view('auth.edit', ['band' => $band]);
     }
 
     public function submitForm(Request $req){
