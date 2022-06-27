@@ -17,7 +17,7 @@
     </form>
     <h3>Onze bibliotheek</h3>
     <div class="verkenItems">
-        {{-- @for ($i = 0; $i < 10; $i++)
+        @for ($i = 0; $i < 10; $i++)
             <a href="{{route('bandinfo')}}">
                 <div class="itemContainer">
                     <div name="item" class="item">
@@ -25,8 +25,8 @@
                     <p id="bandname">AC/DC</p>
                 </div>
             </a>
-        @endfor --}}
-        {!!  Form::open(['method'=>'GET','url'=>'/bands/','class'=>'searchBar','role'=>'search'])  !!}
+        @endfor
+        {{-- {!!  Form::open(['method'=>'GET','url'=>'/bands/','class'=>'searchBar','role'=>'search'])  !!}
         @csrf
             <input type="text" name="keyword" placeholder="Zoek door onze bibliotheek...">
             <button type="submit">
@@ -42,7 +42,7 @@
                     <p>{{$band->bandnaam}}</p>
                 </div>
             </a>
-        @endforeach
+        @endforeach --}}
     </div>
 </div>
 @endsection

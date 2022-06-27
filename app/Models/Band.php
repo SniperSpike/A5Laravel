@@ -20,7 +20,7 @@ class Band extends Model
         'banner',
     ];
 
-    public function bandSearch($keyword) {
-        return Verkennen::where('bandnaam', 'LIKE', "%$keyword%");
-    }
+    // public function bandSearch($keyword) {
+    //     return Verkennen::where('bandnaam', 'LIKE', "%$keyword%");
+    // }
 }
