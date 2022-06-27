@@ -10,7 +10,14 @@ class Band extends Model
     use HasFactory;
 
     protected $fillable = [
-        'bandnaam'
+        'bandnaam', 
+        'biografie',
+        'tekstkleur',
+        'achtergrondkleur',
+        'url1',
+        'url2',
+        'url3',
+        'banner',
     ];
 
     public function bandSearch($keyword) {

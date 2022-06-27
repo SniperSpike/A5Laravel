@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Band;
 
 class EditController extends Controller
 {
@@ -28,6 +29,15 @@ class EditController extends Controller
     }
 
     public function submitForm(Request $req){
-        dd($req->all());
+        return Band::create([
+            'bandnaam' => $req->input('bandNaam'),
+            'biografie' => $req->input('biografie'),
+            'tekstkleur' => $req->input('textKleur'),
+            'achtergrondkleur' => $req->input('achtergrondKleur'),
+            'url1' => $req->input('video1'),
+            'url2' => $req->input('video2'),
+            'url3' => $req->input('video3'),
+            'banner' => $req->input('banner'),
+        ]);
     }
 }
