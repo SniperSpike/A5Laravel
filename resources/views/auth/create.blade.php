@@ -146,7 +146,7 @@
                     <div class="bio">
                         <header class="bio_header">
                             <h2>biographie</h2>
-                            <span class="bio_edit active">Edit</span>
+                            <span class="bio_edit">Edit</span>
                         </header>
                         <textarea id="bio_textarea" name="biografie" readonly>Druk op edit om de tekst aan te passen.</textarea>
                     </div>
