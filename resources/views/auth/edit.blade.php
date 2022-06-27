@@ -272,7 +272,7 @@
 
         myModal.addEventListener('shown.bs.modal', function () {
             cropper = new Cropper(image, {
-                aspectRatio: 19 / 8,
+                aspectRatio: 19 / 7,
                 viewMode: 3,
                 responsive: true,
             });
@@ -285,8 +285,8 @@
         $('body').on('click', '#crop', function () {
 
             canvas = cropper.getCroppedCanvas({
-                width: 1172,
-                height: 400,
+                width: 1272,
+                height: 350,
             });
 
             canvas.toBlob(function (blob) {
