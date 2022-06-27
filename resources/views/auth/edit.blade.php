@@ -126,18 +126,21 @@
                 </div>
                 <div class="info">
                     <div class="bio">
-                        <h2>biographie</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore
-                            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                            dolores et ea
-                            rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                            <br>
-                            <br>
-                            est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed
-                            diam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna
-                        </p>
+                        <header class="bio_header">
+                            <h2>biographie</h2>
+                            <span class="bio_edit">Edit</span>
+                        </header>
+                        <textarea id="bio_textarea" readonly>
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore
+et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus
+
+est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed
+diam nonumy
+eirmod tempor invidunt ut labore et dolore magna
+                        </textarea>
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
@@ -225,7 +228,9 @@
     // in samenwerking met:
     // - stack overflow 
     // - VM Learning Hub (Youtuber)
-
+    $.fn.hasAttr = function(name) {  
+           return this.attr(name) !== undefined;
+        };
     $('documment').ready(function () {
         const $modal = $('#exampleModal');
         const image = document.getElementById('image');
@@ -299,6 +304,20 @@
                 }
             })
         })
+
+
+
+        $(".bio_edit").on('click', function(){
+            if($('#bio_textarea').hasAttr("readonly")){
+                $('#bio_textarea').removeAttr('readonly');
+            }else{
+                $('#bio_textarea').attr('readonly', true);
+            }
+
+        });
+        $('textarea').on('change', function(){
+            $("textarea").height( $("textarea")[0].scrollHeight );
+        });
 
     })
 </script>
