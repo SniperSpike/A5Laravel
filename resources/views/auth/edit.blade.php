@@ -82,6 +82,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="settingsBox">
+                    <div class="header">
+                        <img src="{{asset('images/icons/icon-feather-mail.svg')}}" alt="settings icon">
+                        <h3>Bandlid Uitnodigen</h3>
+                    </div>
+                    <div class="contentBox">
+                        <div class="inputBox">
+                            <label for="inviteEmail" class="col-form-label">Email</label>
+                            <input id="inviteEmail" name="inviteEmail" type="text">
+                        </div>
+                    </div>
+                    <button class="inviteBtn">Uitnodigen</button>
+                </div>
             </div>
             <div class="bottom">
                 <button class="editBtn btn-opslaan">Opslaan</button>
