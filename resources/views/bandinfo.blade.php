@@ -134,9 +134,8 @@
                 </div>
             </div>
         </div>
-
         <footer style="background-color: {{$value->themakleur}};" >
-            <span>Copyright © 2022</span>
+            <span style="filter: brightness(0%);">Copyright © 2022</span>
         </footer>
     </main>
     {{-- <template>
