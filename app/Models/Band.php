@@ -9,11 +9,11 @@ class Band extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'bandnaam'
-    ];
+    // protected $fillable = [
+    //     'bandnaam'
+    // ];
 
-    public function bandSearch($keyword) {
-        return Verkennen::where('bandnaam', 'LIKE', "%$keyword%");
-    }
+    // public function bandSearch($keyword) {
+    //     return Verkennen::where('bandnaam', 'LIKE', "%$keyword%");
+    // }
 }
