@@ -275,10 +275,40 @@ footer {
   letter-spacing: 4px;
   color: #433da0;
 }
-.editWrapper .info .bio p {
+.editWrapper .info #bio_textarea {
   color: #1a2542;
   font-size: 1.2em;
   letter-spacing: 2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+.editWrapper .info .bio_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.editWrapper .info .bio_edit {
+  background-color: white;
+  border-radius: 10px;
+  color: #433da0;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding-inline: 2em;
+  -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.editWrapper .info .bio_edit:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
 }
 @media (max-width: 1200px) {
   .editWrapper .info {
