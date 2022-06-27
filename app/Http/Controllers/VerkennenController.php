@@ -21,7 +21,6 @@ class VerkennenController extends Controller
     public function index()
     {   
         $band = DB::table('bands')->get();
-
         return view('verkennen', ['band' => $band]);
     }
 }

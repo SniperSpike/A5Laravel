@@ -40,6 +40,7 @@ class EditController extends Controller
             'biografie' => $req->input('biografie'),
             'tekstkleur' => $req->input('textKleur'),
             'achtergrondkleur' => $req->input('achtergrondKleur'),
+            'themakleur' => $req->input('themaKleur'),
             'url1' => $req->input('video1'),
             'url2' => $req->input('video2'),
             'url3' => $req->input('video3'),
