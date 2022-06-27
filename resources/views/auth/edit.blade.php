@@ -313,9 +313,9 @@
 
         $(".bio_edit").on('click', function(){
             if($('#bio_textarea').hasAttr("readonly")){
-                $('#bio_textarea').removeAttr('readonly');
+                $('#bio_textarea').removeAttr('readonly').addClass('active');
             }else{
-                $('#bio_textarea').attr('readonly', true);
+                $('#bio_textarea').attr('readonly', true).removeClass('active');
             }
 
         });

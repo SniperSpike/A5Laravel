@@ -92,9 +92,9 @@
                 <span>Copyright © 2022</span>
             </footer>
         </main>
-        <template>
+        {{-- <template>
             <p>Deze zooi werkt</p>
-        </template>
+        </template> --}}
     </div>
 </body>
 

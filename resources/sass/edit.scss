@@ -281,6 +281,10 @@ footer {
                 background-color: darken($color: #ffffff, $amount: 5%);
                 cursor: pointer;
             }
+            &.active {
+                background-color: $primaryColor;
+                color: white;
+            }
         }
     }
     @media (max-width: $breakpoint-desktop) {
