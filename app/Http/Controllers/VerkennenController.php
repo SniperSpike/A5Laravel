@@ -19,14 +19,6 @@ class VerkennenController extends Controller
      */
     public function index(Request $request)
     {
-        // $keyword = $request->keyword;
-
-        // if(isset($keyword)) {
-        //     $bands = Band::bandSearch($keyword);
-        // }
-        // else {
-        //     $bands = Band::all();
-        // }
         return view('verkennen');
     }
 }
