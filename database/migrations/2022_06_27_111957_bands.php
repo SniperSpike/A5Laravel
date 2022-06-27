@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('biografie');
             $table->string('tekstkleur');
             $table->string('achtergrondkleur');
+            $table->string('themakleur');
             $table->string('url1');
             $table->string('url2');
             $table->string('url3');

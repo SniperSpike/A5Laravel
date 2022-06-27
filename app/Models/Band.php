@@ -14,6 +14,7 @@ class Band extends Model
         'biografie',
         'tekstkleur',
         'achtergrondkleur',
+        'themakleur',
         'url1',
         'url2',
         'url3',
