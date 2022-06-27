@@ -335,6 +335,10 @@ footer {
   background-color: #433da0;
   color: white;
 }
+.editWrapper .info .bio_edit.active:hover {
+  background-color: #5953bd;
+  cursor: pointer;
+}
 @media (max-width: 1200px) {
   .editWrapper .info {
     -webkit-box-orient: vertical !important;
