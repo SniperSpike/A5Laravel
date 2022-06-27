@@ -39,7 +39,7 @@
                     <div class="contentBox">
                         <div class="inputBox">
                             <label for="bandNaam" class="col-form-label">Band Naam</label>
-                            <input id="bandNaam" name="bandNaam" type="text">
+                            <input id="bandNaam" name="bandNaam" type="text" required>
                         </div>
                     </div>
                 </div>
@@ -50,12 +50,12 @@
                     </div>
                     <div class="contentBox">
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" id="achtergrondColor" value="#FFFFFF"
+                            <input type="color" class=" colorPicker" name="textKleur" id="achtergrondColor" value="#FFFFFF"
                                 title="Choose your color">
                             <h3>Achtergrond kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" id="textColor" value="#433DA0"
+                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="textColor" value="#433DA0"
                                 title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
@@ -132,7 +132,7 @@
                     style="background:url({{url('images/placeholder.jpg')}}) no-repeat center center;">
                     <h1 id="band-title"></h1>
                     <div class="banner-edit">
-                        <input type="file" id="editBanner" accept=".png, .jpg, .jpeg" />
+                        <input type="file" name="banner" id="editBanner" accept=".png, .jpg, .jpeg" />
                         <label for="editBanner">Edit</label>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                             <h2>biographie</h2>
                             <span class="bio_edit active">Edit</span>
                         </header>
-                        <textarea id="bio_textarea" readonly>Druk op edit om de tekst aan te passen.</textarea>
+                        <textarea id="bio_textarea" name="biografie" readonly>Druk op edit om de tekst aan te passen.</textarea>
                     </div>
                     <div class="muziek">
                         <h2>muziek</h2>
