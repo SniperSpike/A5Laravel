@@ -144,7 +144,7 @@
                     <div class="bio">
                         <header class="bio_header">
                             <h2>biographie</h2>
-                            <span class="bio_edit active">Edit</span>
+                            <span class="bio_edit">Edit</span>
                         </header>
                         <textarea id="bio_textarea" name="biografie" readonly>{{$value->biografie}}</textarea>
                     </div>
@@ -317,9 +317,13 @@
 
         $(".bio_edit").on('click', function(){
             if($('#bio_textarea').hasAttr("readonly")){
-                $('#bio_textarea').removeAttr('readonly').addClass('active');
+                $('#bio_textarea').removeAttr('readonly');
+                $('.bio_edit').addClass('active');
+                $('.bio_edit').html('Save');
             }else{
-                $('#bio_textarea').attr('readonly', true).removeClass('active');
+                $('#bio_textarea').attr('readonly', true);
+                $('.bio_edit').removeClass('active');
+                $('.bio_edit').html('Edit');
             }
 
         });

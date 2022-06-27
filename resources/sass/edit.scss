@@ -285,6 +285,13 @@ footer {
             &.active {
                 background-color: $primaryColor;
                 color: white;
+                &:hover {
+                    background-color: lighten(
+                        $color: $primaryColor,
+                        $amount: 10%
+                    );
+                    cursor: pointer;
+                }
             }
         }
     }
