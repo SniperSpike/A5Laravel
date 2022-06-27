@@ -60,6 +60,11 @@
                                 title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
+                        <div class="colorContainer">
+                            <input type="color" class=" colorPicker" name="themaKleur" id="themaColor" value="{{$value->tekstkleur}}"
+                                title="Choose your color">
+                            <h3>Thema kleur</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="settingsBox">
