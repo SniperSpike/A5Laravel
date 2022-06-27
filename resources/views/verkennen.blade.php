@@ -22,6 +22,9 @@
 
         @foreach($band as $value)
         <a href="{{url('bandinfo/'. $value->id)}}">
+            <div class="itemContainer">
+                <div name="item" style="background:url({{$value->banner}}) no-repeat center center; background-size: cover;" class="item"></div>
+            </div>
             <p class="bandname">{{$value->bandnaam}}</p>
         </a>
         @endforeach
