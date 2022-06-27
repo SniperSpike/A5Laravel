@@ -118,7 +118,7 @@
             <div class="container col-md-7 col-sm-12 editWrapper">
                 <div id="bandBanner" class="banner"
                     style="background:url({{url('images/test/banner.png')}}) no-repeat center center;">
-                    <h1>AC/DC</h1>
+                    <h1 id="band-title">AC/DC</h1>
                     <div class="banner-edit">
                         <input type="file" id="editBanner" accept=".png, .jpg, .jpeg" />
                         <label for="editBanner">Edit</label>
@@ -128,7 +128,7 @@
                     <div class="bio">
                         <header class="bio_header">
                             <h2>biographie</h2>
-                            <span class="bio_edit">Edit</span>
+                            <span class="bio_edit active">Edit</span>
                         </header>
                         <textarea id="bio_textarea" readonly>
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -229,8 +229,8 @@ eirmod tempor invidunt ut labore et dolore magna
     // - stack overflow 
     // - VM Learning Hub (Youtuber)
     $.fn.hasAttr = function(name) {  
-           return this.attr(name) !== undefined;
-        };
+        return this.attr(name) !== undefined;
+    };  
     $('documment').ready(function () {
         const $modal = $('#exampleModal');
         const image = document.getElementById('image');
@@ -318,7 +318,10 @@ eirmod tempor invidunt ut labore et dolore magna
         $('textarea').on('change', function(){
             $("textarea").height( $("textarea")[0].scrollHeight );
         });
-
+        
+        $("#bandNaam").on("input", function() {
+            $("#band-title").html($(this).val());
+        });
     })
 </script>
 
