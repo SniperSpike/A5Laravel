@@ -36,6 +36,7 @@
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-size: cover !important;
 }
 .dashboardWrapper .bandListContainer .bandItem:hover,
 .dashboardWrapper .bandListContainer .addBandItem:hover {

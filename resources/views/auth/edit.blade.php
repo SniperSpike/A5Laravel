@@ -132,7 +132,8 @@
                     style="background:url({{url('images/placeholder.jpg')}}) no-repeat center center;">
                     <h1 id="band-title"></h1>
                     <div class="banner-edit">
-                        <input type="file" name="banner" id="editBanner" accept=".png, .jpg, .jpeg" />
+                        <input type="file" name="banner" id="editBanner" />
+                        <input type="hidden" name="base64data" id="base64data" />
                         <label for="editBanner">Edit</label>
                     </div>
                 </div>
@@ -302,6 +303,7 @@
                 reader.onloadend = function(){
                     let base64data = reader.result;
                     $('#bandBanner').css('background', 'url(' + base64data + ') no-repeat center center');
+                    $('#base64data').val(base64data);
                     readURL(base64data);
                 }
             })

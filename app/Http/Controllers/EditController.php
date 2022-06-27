@@ -29,7 +29,7 @@ class EditController extends Controller
     }
 
     public function submitForm(Request $req){
-        return Band::create([
+        Band::create([
             'bandnaam' => $req->input('bandNaam'),
             'biografie' => $req->input('biografie'),
             'tekstkleur' => $req->input('textKleur'),
@@ -37,7 +37,8 @@ class EditController extends Controller
             'url1' => $req->input('video1'),
             'url2' => $req->input('video2'),
             'url3' => $req->input('video3'),
-            'banner' => $req->input('banner'),
+            'banner' => $req->input('base64data'),
         ]);
+        return redirect('dashboard');
     }
 }

@@ -30,6 +30,7 @@
             cursor: pointer;
             text-decoration: none;
             transition: all 0.3s;
+            background-size: cover !important;
             &:hover {
                 transform: scale(1.05);
             }
