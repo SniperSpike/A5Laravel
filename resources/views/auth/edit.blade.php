@@ -23,14 +23,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css">
 
 </head>
-
-<body>
+@foreach($band as $value)
+<body style="background-color: {{$value->achtergrondkleur}};">
     <div id="app">
-        @foreach($band as $value)
+
         <form action="{{url('edit/submit')}}" method="POST">
             @csrf
         {{-- overlay voor edit opties --}}
-        <div id="overlay">
+        <div id="overlay" >
             <div class="top">
                 <div class="settingsBox">
                     <div class="header">
@@ -106,9 +106,9 @@
             </div>
         </div>
 
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white" style="background-color: {{$value->achtergrondkleur}} !important;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" style="color: {{$value->themakleur}} !important;" href="{{ url('/') }}">
                     {{__('EPK Media')}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -120,8 +120,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}" >
+                            <a class="nav-link" href="{{ url('/') }}" >{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item {{ Request::is('verkennen') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('verkennen') }}">{{ __('Verkennen') }}</a>
@@ -147,13 +147,13 @@
                 <div class="info">
                     <div class="bio">
                         <header class="bio_header">
-                            <h2>biographie</h2>
+                            <h2 style="color: {{$value->themakleur}};">biographie</h2>
                             <span class="bio_edit">Edit</span>
                         </header>
-                        <textarea id="bio_textarea" name="biografie" readonly>{{$value->biografie}}</textarea>
+                        <textarea id="bio_textarea" name="biografie" style="color: {{$value->tekstkleur}}; background-color: {{$value->achtergrondkleur}};" readonly>{{$value->biografie}}</textarea>
                     </div>
                     <div class="muziek">
-                        <h2>muziek</h2>
+                        <h2 style="color: {{$value->themakleur}};">muziek</h2>
 
                         <!-- Button trigger modal -->
                         <button type="button" id="popupBtn" data-bs-toggle="modal"
@@ -225,7 +225,7 @@
             </div>
 
 
-            <footer>
+            <footer style="background-color: {{$value->themakleur}};">
                 <span>Copyright © 2022</span>
             </footer>
         </main>
@@ -324,6 +324,7 @@
                 $('#bio_textarea').removeAttr('readonly');
                 $('.bio_edit').addClass('active');
                 $('.bio_edit').html('Save');
+                $('#bio_textarea').focus();
             }else{
                 $('#bio_textarea').attr('readonly', true);
                 $('.bio_edit').removeClass('active');
@@ -338,6 +339,19 @@
         $("#bandNaam").on("input", function() {
             $("#band-title").html($(this).val());
         });
+
+        function rgbToHexBasedOnBg(bgColor, lightColor, darkColor) {
+            let rgb = bgColor.substring(4, bgColor.length-1)
+            .replace(/ /g, '')
+            .split(',');
+            return (((rgb[0] * 0.299) + (rgb[1] * 0.587) + (rgb[2] * 0.114)) > 186) ?
+                darkColor : lightColor;
+        }
+
+        const color = document.querySelector('footer');
+        const colorSpan = document.querySelector('footer>span');
+        colorSpan.style.color = rgbToHexBasedOnBg(color.style.backgroundColor, '#FFFFFF', '#000000');
+
     })
 </script>
 

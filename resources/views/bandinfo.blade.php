@@ -17,17 +17,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/homecontent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/verkennen.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/edit.css')}}" rel="stylesheet">
 
 </head>
 @foreach($band as $value)
-<body style="background-color: {{$value->tekstkleur}}">
+<body style="background-color: {{$value->achtergrondkleur}}">
     <div id="app">
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white" style="background-color: {{$value->tekstkleur}} !important;">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white" style="background-color: {{$value->achtergrondkleur}} !important;">
             <div class="container">
                 <a class="navbar-brand" style="color: {{$value->themakleur}} !important;" href="{{ url('/') }}">
                     {{__('EPK Media')}}
@@ -95,11 +91,11 @@
             <div class="info">
                 <div class="bio">
                     <h2 style="color: {{$value->themakleur}}">biographie</h2>
-                    <p style="color: {{$value->achtergrondkleur}} !important;">{{$value->biografie}}</p>
+                    <p style="color: {{$value->tekstkleur}} !important;">{{$value->biografie}}</p>
                 </div>
                 <div class="muziek">
                     <h2 style="color: {{$value->themakleur}}">muziek</h2>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                    {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <iframe width="100%" height="300" src="{{$value->url1}}"
@@ -130,22 +126,32 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
         <footer style="background-color: {{$value->themakleur}};" >
-            <span style="filter: brightness(0%);">Copyright © 2022</span>
+            <span>Copyright © 2022</span>
         </footer>
     </main>
-    {{-- <template>
-        <p>Deze zooi werkt</p>
-    </template> --}}
 </div>
-@endforeach
-</body>
 
+</body>
+@endforeach
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
+<script>
+    function rgbToHexBasedOnBg(bgColor, lightColor, darkColor) {
+        let rgb = bgColor.substring(4, bgColor.length-1)
+        .replace(/ /g, '')
+        .split(',');
+        return (((rgb[0] * 0.299) + (rgb[1] * 0.587) + (rgb[2] * 0.114)) > 186) ?
+            darkColor : lightColor;
+    }
 
+    const color = document.querySelector('footer');
+    const colorSpan = document.querySelector('footer>span');
+    colorSpan.style.color = rgbToHexBasedOnBg(color.style.backgroundColor, '#FFFFFF', '#000000');
+
+</script>
 </html>
