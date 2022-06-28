@@ -25,6 +25,6 @@ class VerkennenController extends Controller
             $band = Band::all();
         }
 
-        return view('verkennen', compact('band'),['band' => $band]);
+        return view('verkennen', compact('band'),['bands' => $band]);
     }
 }

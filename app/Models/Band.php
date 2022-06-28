@@ -21,7 +21,7 @@ class Band extends Model
         'banner',
     ];
 
-    public static function search($search) {
-        return Band::where("bandnaam", 'LIKE', "%$search%");
+    public static function search($keyword) {
+        return Band::where("bandnaam", 'LIKE', "%$keyword%");
     }
 }
