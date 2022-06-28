@@ -152,6 +152,5 @@
     const color = document.querySelector('footer');
     const colorSpan = document.querySelector('footer>span');
     colorSpan.style.color = rgbToHexBasedOnBg(color.style.backgroundColor, '#FFFFFF', '#000000');
-
 </script>
 </html>

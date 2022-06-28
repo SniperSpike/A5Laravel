@@ -50,18 +50,18 @@
                     </div>
                     <div class="contentBox">
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="textKleur" id="achtergrondColor" value="#FFFFFF"
+                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="achtergrondColor" value="#FFFFFF"
                                 title="Choose your color">
                             <h3>Achtergrond kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="textColor" value="#433DA0"
+                            <input type="color" class=" colorPicker" name="textKleur" id="textColor" value="#433DA0"
                                 title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="themaKleur" id="themaColor" value="#433DA0"
-                                title="Choose your color">
+                            <input type="color" class="colorPicker" name="themaKleur" id="themeColor" value="#433DA0"
+                            title="Choose your color">
                             <h3>Thema kleur</h3>
                         </div>
                     </div>
