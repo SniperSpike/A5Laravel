@@ -1,0 +1,298 @@
+.navbar {
+  z-index: 100;
+}
+
+#app {
+  position: relative;
+}
+
+footer {
+  z-index: 300;
+}
+
+#overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5em;
+  width: 350px;
+  background-color: rgba(67, 61, 160, 0.86);
+  z-index: 200;
+  overflow-y: auto;
+}
+#overlay .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+#overlay .top .settingsBox {
+  margin-bottom: 2em;
+}
+#overlay .top .settingsBox .header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-self: center;
+}
+#overlay .top .settingsBox .header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+#overlay .top .settingsBox .contentBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+}
+#overlay .top .settingsBox .contentBox .inputBox {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+}
+#overlay .top .settingsBox .contentBox .inputBox label {
+  color: #adaabb;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: -0.4em;
+  margin-left: 2px;
+}
+#overlay .top .settingsBox .contentBox .inputBox input {
+  color: white;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #adaabb;
+  width: 100%;
+  font-size: 18px;
+}
+#overlay .top .settingsBox .contentBox .inputBox input:focus {
+  outline: none;
+}
+#overlay .top .settingsBox .contentBox .colorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.8em;
+}
+#overlay .top .settingsBox .contentBox .colorContainer .colorPicker {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+}
+#overlay .top .settingsBox .contentBox .colorContainer h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+#overlay .top .inviteBtn {
+  border-radius: 10px;
+  padding: 0.3em 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial;
+  border: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  color: #433da0;
+  background-color: #fff;
+  margin-top: 1em;
+}
+#overlay .top .inviteBtn:hover {
+  background-color: #e6e6e6;
+}
+#overlay .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 70px;
+}
+#overlay .bottom .editBtn {
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+#overlay .bottom .btn-opslaan {
+  color: #433da0;
+  background-color: #fff;
+}
+#overlay .bottom .btn-opslaan:hover {
+  background-color: #e6e6e6;
+}
+#overlay .bottom .btn-annuleren {
+  color: #fff;
+  background-color: #433da0;
+}
+#overlay .bottom .btn-annuleren:hover {
+  background-color: #4b44b2;
+}
+
+#popupBtn {
+  display: none;
+}
+
+.editWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: -1em;
+  margin-bottom: 5em;
+}
+.editWrapper img {
+  display: block;
+  max-width: 100%;
+}
+.editWrapper .modal-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.editWrapper .btn-cropImage {
+  background-color: #433da0;
+  color: white;
+}
+.editWrapper .cropper-container {
+  max-width: 100% !important;
+}
+.editWrapper .cropper-point,
+.editWrapper .cropper-line {
+  background-color: #433da0 !important;
+}
+.editWrapper .cropper-view-box {
+  outline: 1px solid #433da0;
+  outline-color: rgba(67, 61, 160, 0.16);
+}
+.editWrapper .banner {
+  display: block;
+  width: 100%;
+  max-height: 40vh;
+  height: 40vh;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  background-size: cover !important;
+}
+.editWrapper .banner img {
+  width: 100%;
+}
+.editWrapper .banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4em;
+  text-shadow: 3px 2px #1a2542;
+}
+.editWrapper .banner #editBanner {
+  display: none;
+}
+.editWrapper .banner .banner-edit label {
+  position: absolute;
+  top: 98%;
+  left: 99%;
+  transform: translate(-98%, -98%);
+  background-color: white;
+  border-radius: 10px;
+  color: #433da0;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding-inline: 2em;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.editWrapper .banner .banner-edit label:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.editWrapper .info {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+}
+.editWrapper .info .bio,
+.editWrapper .info .muziek {
+  width: 50%;
+  min-height: 40vh;
+}
+.editWrapper .info .bio h2,
+.editWrapper .info .muziek h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #433da0;
+}
+.editWrapper .info #bio_textarea {
+  color: #1a2542;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+.editWrapper .info #bio_textarea:focus {
+  outline: none;
+}
+.editWrapper .info .bio_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editWrapper .info .bio_edit {
+  background-color: white;
+  border-radius: 10px;
+  color: #433da0;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding-inline: 2em;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.editWrapper .info .bio_edit:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.editWrapper .info .bio_edit.active {
+  background-color: #433da0;
+  color: white;
+}
+.editWrapper .info .bio_edit.active:hover {
+  background-color: #5953bd;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .editWrapper .info {
+    flex-direction: column !important;
+    justify-content: unset !important;
+    gap: unset !important;
+  }
+  .editWrapper .bio,
+.editWrapper .muziek {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .editWrapper .bio p,
+.editWrapper .muziek p {
+    font-size: 1em !important;
+  }
+  .editWrapper .banner h1 {
+    font-size: 3em !important;
+    text-align: center;
+  }
+}/*# sourceMappingURL=edit.css.map */

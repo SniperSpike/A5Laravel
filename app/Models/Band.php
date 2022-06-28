@@ -10,7 +10,7 @@ class Band extends Model
     use HasFactory;
 
     protected $fillable = [
-        'bandnaam', 
+        'bandnaam',
         'biografie',
         'tekstkleur',
         'achtergrondkleur',
@@ -20,4 +20,8 @@ class Band extends Model
         'url3',
         'banner',
     ];
+
+    public static function search($search) {
+        return Band::where("bandnaam", 'LIKE', "%$search%");
+    }
 }
