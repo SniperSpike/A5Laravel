@@ -34,6 +34,22 @@ class EditController extends Controller
         return view('auth.edit', ['band' => $band]);
     }
 
+    // in samenwerking met Stack Overflow
+    private function getYoutubeEmbedUrl($url)
+    {
+         $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+         $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+    
+        if (preg_match($longUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+    
+        if (preg_match($shortUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+        return 'https://www.youtube.com/embed/' . $youtube_id ;
+    }
+
     public function submitForm(Request $req){
         Band::create([
             'bandnaam' => $req->input('bandNaam'),
@@ -41,9 +57,9 @@ class EditController extends Controller
             'tekstkleur' => $req->input('textKleur'),
             'achtergrondkleur' => $req->input('achtergrondKleur'),
             'themakleur' => $req->input('themaKleur'),
-            'url1' => $req->input('video1'),
-            'url2' => $req->input('video2'),
-            'url3' => $req->input('video3'),
+            'url1' => $this->getYoutubeEmbedUrl($req->input('video1')),
+            'url2' => $this->getYoutubeEmbedUrl($req->input('video2')),
+            'url3' => $this->getYoutubeEmbedUrl($req->input('video3')),
             'banner' => $req->input('base64data'),
         ]);
         return redirect('dashboard');
