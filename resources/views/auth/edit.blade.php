@@ -187,22 +187,22 @@
                                     </div>
                                 </div>
                         </div>
-                        {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/v2AC41dglnM"
+                                    <iframe width="100%" height="300" src="{{$value->url1}}"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/l482T0yNkeo"
+                                    <iframe width="100%" height="300" src="{{$value->url2}}"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/etAIpkdhU9Q"
+                                    <iframe width="100%" height="300" src="{{$value->url3}}"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
@@ -218,7 +218,7 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div> --}}
+                        </div>
                     </div>
 
                 </div>

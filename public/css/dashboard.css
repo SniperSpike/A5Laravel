@@ -13,35 +13,23 @@
   font-family: Arial;
 }
 .dashboardWrapper .bandListContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1em 3em;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
+  justify-content: normal;
 }
 .dashboardWrapper .bandListContainer .bandItem,
 .dashboardWrapper .bandListContainer .addBandItem {
   cursor: pointer;
   text-decoration: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-size: cover !important;
 }
 .dashboardWrapper .bandListContainer .bandItem:hover,
 .dashboardWrapper .bandListContainer .addBandItem:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 .dashboardWrapper .bandListContainer .bandItem {
   width: 398px;
@@ -56,8 +44,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .dashboardWrapper .bandListContainer .bandItem img {
   width: 100%;
@@ -66,15 +53,9 @@
   border-radius: 20px;
 }
 .dashboardWrapper .bandListContainer .addBandItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 398px;
   height: 214px;
   border-radius: 20px;

@@ -15,16 +15,9 @@ footer {
   right: 0;
   top: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1.5em;
   width: 350px;
   background-color: rgba(67, 61, 160, 0.86);
@@ -32,29 +25,18 @@ footer {
   overflow-y: auto;
 }
 #overlay .top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1.6em;
 }
 #overlay .top .settingsBox {
   margin-bottom: 2em;
 }
 #overlay .top .settingsBox .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 1em;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 #overlay .top .settingsBox .header h3 {
   font-size: 18px;
@@ -65,23 +47,13 @@ footer {
   line-height: 1.5;
 }
 #overlay .top .settingsBox .contentBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-top: 0.5em;
 }
 #overlay .top .settingsBox .contentBox .inputBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-family: Arial;
 }
 #overlay .top .settingsBox .contentBox .inputBox label {
@@ -103,16 +75,9 @@ footer {
   outline: none;
 }
 #overlay .top .settingsBox .contentBox .colorContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   gap: 1em;
   margin-bottom: 0.8em;
 }
@@ -136,8 +101,7 @@ footer {
   font-weight: bold;
   font-family: Arial;
   border: none;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   color: #433da0;
   background-color: #fff;
   margin-top: 1em;
@@ -146,16 +110,9 @@ footer {
   background-color: #e6e6e6;
 }
 #overlay .bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1em;
   margin-bottom: 70px;
 }
@@ -167,8 +124,7 @@ footer {
   font-family: Arial;
   border: none;
   text-decoration: none;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 #overlay .bottom .btn-opslaan {
   color: #433da0;
@@ -190,13 +146,8 @@ footer {
 }
 
 .editWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2em;
   margin-top: -1em;
   margin-bottom: 5em;
@@ -244,8 +195,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 4em;
   text-shadow: 3px 2px #1a2542;
@@ -257,8 +207,7 @@ footer {
   position: absolute;
   top: 98%;
   left: 99%;
-  -webkit-transform: translate(-98%, -98%);
-          transform: translate(-98%, -98%);
+  transform: translate(-98%, -98%);
   background-color: white;
   border-radius: 10px;
   color: #433da0;
@@ -266,20 +215,15 @@ footer {
   font-size: 15px;
   font-weight: bold;
   padding-inline: 2em;
-  -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
 }
 .editWrapper .banner .banner-edit label:hover {
   background-color: #f2f2f2;
   cursor: pointer;
 }
 .editWrapper .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 5em;
 }
 .editWrapper .info .bio,
@@ -306,15 +250,9 @@ footer {
   outline: none;
 }
 .editWrapper .info .bio_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .editWrapper .info .bio_edit {
   background-color: white;
@@ -324,8 +262,7 @@ footer {
   font-size: 15px;
   font-weight: bold;
   padding-inline: 2em;
-  -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
 }
 .editWrapper .info .bio_edit:hover {
   background-color: #f2f2f2;
@@ -341,13 +278,8 @@ footer {
 }
 @media (max-width: 1200px) {
   .editWrapper .info {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-pack: unset !important;
-        -ms-flex-pack: unset !important;
-            justify-content: unset !important;
+    flex-direction: column !important;
+    justify-content: unset !important;
     gap: unset !important;
   }
   .editWrapper .bio,
