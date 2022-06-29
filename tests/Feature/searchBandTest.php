@@ -20,7 +20,8 @@ class searchBandTest extends TestCase
     {
         Band::factory()->count(5)->create();
 
-        $first = Band::factory()->create(['bandnaam' => 'Name',
+        $first = Band::factory()->create([
+        'bandnaam' => 'Name',
         'biografie' => 'Name',
         'tekstkleur' => 'Name',
         'achtergrondkleur' => 'Name',
@@ -32,7 +33,8 @@ class searchBandTest extends TestCase
     ]);
 
 
-        $second = Band::factory()->create(['bandnaam' => 'Name',
+        $second = Band::factory()->create([
+        'bandnaam' => 'Name',
         'biografie' => 'Name',
         'tekstkleur' => 'Name',
         'achtergrondkleur' => 'Name',

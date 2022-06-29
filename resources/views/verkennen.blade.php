@@ -2,13 +2,15 @@
 
 @section('content')
 <div class="container  col-sm-12 verkennenWrapper">
-    <form action="{{Form::open(['method'=>'GET','url'=>'/bands/','class'=>'searchBar','role'=>'search'])}}">
+    <form action="">
+        <form action="{{url('bands.index')}}" method="post" class="searchBar">
+        @csrf
         <input type="text" name="keyword" placeholder="Zoek door onze bibliotheek...">
         <button>
             <img src="{{asset('images/search.svg')}}" alt="">
         </button>
     </form>
-    {{!! Form::close() !!}}
+
     <h3>Onze bibliotheek</h3>
     <div class="verkenItems">
         @foreach($band as $value)

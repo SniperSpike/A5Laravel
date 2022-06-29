@@ -25,6 +25,16 @@ class VerkennenController extends Controller
             $band = Band::all();
         }
 
+        // $bands = Band::where([
+        //     ['bandnaam', '!=', Null],
+        //     [function ($query) use ($request) {
+        //         if(($term = $request->term)) {
+        //             $query->orWhere('bandnaam', 'LIKE', '%' . $term . '%')->get();
+        //         }
+        //     }]
+        // ])
+
         return view('verkennen', compact('band'),['bands' => $band]);
+        // return view('bands.index', compact('band'))->with('i', request()->input('page', 1(-1) *5);
     }
 }
