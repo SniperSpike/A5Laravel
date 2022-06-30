@@ -12,11 +12,11 @@
         </div>
     </a>
     @endforeach
-        <div class="addBandItem">
-            <a href="{{route('edit')}}">
+        <a href="{{route('edit')}}">
+            <div class="addBandItem">
                 <img src="{{ asset('images/addBand.svg') }}" alt="Add Bands">
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 </div>
 @endsection
