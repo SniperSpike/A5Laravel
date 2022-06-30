@@ -27,8 +27,9 @@
 <body style="background-color: {{$value->achtergrondkleur}};">
     <div id="app">
 
-        <form action="{{url('edit/submit')}}" method="POST">
-            @csrf
+        <form action="{{url('edit/update')}}" method="POST">
+        @csrf
+        <input type="hidden" name="id" value="{{$value->id}}">
         {{-- overlay voor edit opties --}}
         <div id="overlay" >
             <div class="top">
@@ -102,7 +103,7 @@
             </div>
             <div class="bottom">
                 <button class="editBtn btn-opslaan">Opslaan</button>
-                <a class="editBtn btn-annuleren" href="{{route('dashboard')}}">Annuleren</a>
+                <a class="editBtn btn-annuleren" href="{{route('dashboard')}}">Dashboard</a>
             </div>
         </div>
 
