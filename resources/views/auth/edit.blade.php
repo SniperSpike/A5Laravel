@@ -28,7 +28,8 @@
     <div id="app">
 
         <form action="{{url('edit/submit')}}" method="POST">
-            @csrf
+        @csrf
+        {{-- <input type="hidden" name="id" value="{{$value->id}}"> --}}
         {{-- overlay voor edit opties --}}
         <div id="overlay" >
             <div class="top">

@@ -1,14 +1,7 @@
 .verkennenWrapper .searchBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   width: 500px;
   margin: 0 auto;
   border-radius: 10px;
@@ -29,16 +22,10 @@
   padding-left: 1em;
   font-family: Berlin Sans FB;
 }
-.verkennenWrapper .searchBar input::-webkit-input-placeholder {
-  color: #adaabb;
-}
 .verkennenWrapper .searchBar input::-moz-placeholder {
   color: #adaabb;
 }
 .verkennenWrapper .searchBar input:-ms-input-placeholder {
-  color: #adaabb;
-}
-.verkennenWrapper .searchBar input::-ms-input-placeholder {
   color: #adaabb;
 }
 .verkennenWrapper .searchBar input::placeholder {
@@ -54,18 +41,10 @@
   margin-top: 0.5em;
 }
 .verkennenWrapper .verkenItems {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2em 1.5em;
   margin-top: 1em;
 }

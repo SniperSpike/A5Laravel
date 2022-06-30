@@ -21,7 +21,7 @@ Route::get('/bandinfo/{id}', [App\Http\Controllers\BandInfoController::class, 'g
 
 
 
-Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('verkennen');
+// Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('verkennen');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -30,4 +30,4 @@ Route::get('/edit', [App\Http\Controllers\EditController::class, 'index'])->name
 Route::get('/edit/{id}', [App\Http\Controllers\EditController::class, 'editBand'])->name('editBand');
 Route::post('/edit/submit', [App\Http\Controllers\EditController::class, 'submitForm'])->name('edit.submitForm');
 
-Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('band');
+Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('verkennen');

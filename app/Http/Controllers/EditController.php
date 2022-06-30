@@ -34,7 +34,7 @@ class EditController extends Controller
         return view('auth.edit', ['band' => $band]);
     }
 
-    // in samenwerking met Stack Overflowi
+    // in samenwerking met Stack Overflow
     private function getYoutubeEmbedUrl($url)
     {
          $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
@@ -63,9 +63,5 @@ class EditController extends Controller
             'banner' => $req->input('base64data'),
         ]);
         return redirect('dashboard');
-    }
-
-    public function updateForm(Request $req){
-        $data = Band::find($req->id);
     }
 }

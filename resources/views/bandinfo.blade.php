@@ -95,7 +95,7 @@
                 </div>
                 <div class="muziek">
                     <h2 style="color: {{$value->themakleur}}">muziek</h2>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                    {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <iframe width="100%" height="300" src="{{$value->url1}}"
@@ -126,7 +126,7 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
