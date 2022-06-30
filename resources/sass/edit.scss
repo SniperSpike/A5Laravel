@@ -68,7 +68,7 @@ footer {
                         border: none;
                         border-bottom: 1px solid $secondaryColor;
                         width: 100%;
-                        
+
                         font-size: 18px;
                         &:focus {
                             outline: none;
@@ -210,6 +210,7 @@ footer {
             color: white;
             font-size: 4em;
             text-shadow: 3px 2px $fontColor;
+            text-align: center;
         }
 
         #editBanner {
@@ -313,7 +314,6 @@ footer {
         .banner {
             h1 {
                 font-size: 3em !important;
-                text-align: center;
             }
         }
     }

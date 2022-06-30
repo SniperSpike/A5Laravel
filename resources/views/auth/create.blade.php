@@ -55,7 +55,7 @@
                             <h3>Achtergrond kleur</h3>
                         </div>
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="textKleur" id="textColor" value="#433DA0"
+                            <input type="color" class=" colorPicker" name="textKleur" id="textColor" value="#1a2542"
                                 title="Choose your color">
                             <h3>Text kleur</h3>
                         </div>
