@@ -6,8 +6,12 @@
   overflow: hidden;
 }
 .homecontent-wrapper .personalised-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -15,18 +19,35 @@
 }
 .homecontent-wrapper .personalised-wrapper .cta-container {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: Berlin Sans FB;
 }
 .homecontent-wrapper .personalised-wrapper .cta-container .searchBar {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -50,10 +71,16 @@
   padding-left: 1em;
   font-family: Berlin Sans FB;
 }
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-webkit-input-placeholder {
+  color: #adaabb;
+}
 .homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-moz-placeholder {
   color: #adaabb;
 }
 .homecontent-wrapper .personalised-wrapper .cta-container .searchBar input:-ms-input-placeholder {
+  color: #adaabb;
+}
+.homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::-ms-input-placeholder {
   color: #adaabb;
 }
 .homecontent-wrapper .personalised-wrapper .cta-container .searchBar input::placeholder {
@@ -70,6 +97,7 @@
   background: #ffffff;
   font-size: 22px;
   margin-top: 2em;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .homecontent-wrapper .personalised-wrapper .cta-container .cta-btn:hover {
@@ -89,10 +117,18 @@
   border-radius: 40px;
 }
 .homecontent-wrapper .about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -119,9 +155,15 @@
   height: 533px;
 }
 .homecontent-wrapper .inspiratie-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: auto;
   margin-top: 5em;
@@ -131,10 +173,15 @@
   background: linear-gradient(45deg, #433da0, #91528d);
   border-radius: 50px 0px 0px 50px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-items: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 40px 40px 40px 40px;
   width: 1366px;
   height: auto;
@@ -148,8 +195,11 @@
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles {
   gap: 5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles img {
   width: 210px;
@@ -159,9 +209,15 @@
   border-radius: 20px;
 }
 .homecontent-wrapper .interesse-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   width: 100%;
   height: auto;
 }
@@ -186,6 +242,7 @@
   .personalised-wrapper img {
     border-radius: 0px !important;
   }
+
   .cta-container .searchBar {
     margin-bottom: 0 !important;
     margin-top: 1em !important;
@@ -201,6 +258,7 @@
     position: relative;
     font-size: 14px;
   }
+
   .about-wrapper article {
     width: 100% !important;
     padding: 1em !important;
@@ -208,9 +266,14 @@
   .about-wrapper img {
     display: none !important;
   }
+
   .inspiratie-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
     padding: 0px !important;
   }
   .inspiratie-wrapper h1 {
@@ -219,13 +282,16 @@
   .inspiratie-wrapper .tiles-container {
     background: #433da0 !important;
     border-radius: 0px !important;
-    justify-content: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
     padding: 0px !important;
   }
   .inspiratie-wrapper .tiles-container .tiles img {
     border-radius: 0px !important;
     padding: 10px !important;
   }
+
   .interesse a {
     font-size: 19px !important;
   }

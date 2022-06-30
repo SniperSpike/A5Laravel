@@ -1,6 +1,9 @@
 // Variables
 @import "variables";
 
+:root {
+    --primaryColor: #433da0;
+}
 // Layout App Blade
 
 .navbar-brand {
@@ -12,6 +15,7 @@
     .active {
         a {
             color: $primaryColor !important;
+            font-weight: bold !important;
         }
     }
     li {
@@ -19,7 +23,7 @@
             font-weight: bold;
             color: $secondaryColor !important;
             &:hover {
-                color: $primaryColor !important;
+                color: var(--primaryColor) !important;
             }
         }
     }

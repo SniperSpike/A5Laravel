@@ -353,6 +353,9 @@
         const colorSpan = document.querySelector('footer>span');
         colorSpan.style.color = rgbToHexBasedOnBg(color.style.backgroundColor, '#FFFFFF', '#000000');
 
+        // zorgt voor de hover color op de nav-items
+        var r = document.querySelector(':root');
+        r.style.setProperty('--primaryColor', color.style.backgroundColor);
     })
 </script>
 

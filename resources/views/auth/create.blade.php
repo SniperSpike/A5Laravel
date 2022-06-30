@@ -335,6 +335,10 @@
         $("#bandNaam").on("input", function() {
             $("#band-title").html($(this).val());
         });
+
+        // zorgt voor de hover color op de nav-items
+        var r = document.querySelector(':root');
+        r.style.setProperty('--primaryColor', color.style.backgroundColor);
     })
 </script>
 

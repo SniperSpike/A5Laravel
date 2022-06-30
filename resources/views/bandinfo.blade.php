@@ -1,6 +1,6 @@
+@foreach($band as $value)
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,8 +19,11 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
 
+
+
+
 </head>
-@foreach($band as $value)
+
 <body style="background-color: {{$value->achtergrondkleur}}">
     <div id="app">
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white" style="background-color: {{$value->achtergrondkleur}} !important;">
@@ -152,5 +155,9 @@
     const color = document.querySelector('footer');
     const colorSpan = document.querySelector('footer>span');
     colorSpan.style.color = rgbToHexBasedOnBg(color.style.backgroundColor, '#FFFFFF', '#000000');
+
+    // zorgt voor de hover color op de nav-items
+    var r = document.querySelector(':root');
+    r.style.setProperty('--primaryColor', color.style.backgroundColor);
 </script>
 </html>
