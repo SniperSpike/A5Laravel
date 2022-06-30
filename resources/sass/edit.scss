@@ -29,7 +29,7 @@ footer {
     .top {
         display: flex;
         flex-direction: column;
-        gap: 1.6em;
+        gap: 0.5em;
 
         .settingsBox {
             margin-bottom: 2em;
@@ -94,6 +94,24 @@ footer {
                         line-height: 1.5;
                         margin: 0;
                     }
+                }
+            }
+        }
+        .circleBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .circleBtn {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #433da0;
+                border-radius: 50px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                &:hover {
+                    background-color: lighten(#433da0, 10%);
                 }
             }
         }

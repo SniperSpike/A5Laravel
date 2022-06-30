@@ -27,4 +27,4 @@ Route::get('/edit', [App\Http\Controllers\EditController::class, 'index'])->name
 Route::get('/edit/{id}', [App\Http\Controllers\EditController::class, 'editBand'])->name('editBand');
 Route::post('/edit/submit', [App\Http\Controllers\EditController::class, 'submitForm'])->name('edit.submitForm');
 Route::post('/edit/update', [App\Http\Controllers\EditController::class, 'updateForm'])->name('edit.updateForm');
-
+Route::get('/edit/delete/{id}', [App\Http\Controllers\EditController::class, 'delete'])->name('edit.delete');

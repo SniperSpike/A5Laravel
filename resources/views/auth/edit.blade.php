@@ -100,6 +100,18 @@
                     </div>
                     <button class="inviteBtn">Uitnodigen</button>
                 </div>
+                <div class="settingsBox circleBox">
+                    <a href="#">
+                        <div class="circleBtn">
+                            <img src="{{asset('images/icons/Icon-awesome-file-image.svg')}}" alt="image-icon">
+                        </div>
+                    </a>
+                    <a href="/edit/delete/{{$value->id}}">
+                        <div class="circleBtn">
+                            <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon">
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="bottom">
                 <button class="editBtn btn-opslaan">Opslaan</button>

@@ -79,4 +79,10 @@ class EditController extends Controller
         $data->save();
         return redirect("/edit/" . $data->id);
     }
+
+    public function delete($id){
+        $data = Band::find($id);
+        $data->delete();
+        return redirect('dashboard');
+    }
 }
