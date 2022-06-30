@@ -64,4 +64,19 @@ class EditController extends Controller
         ]);
         return redirect('dashboard');
     }
+
+    public function updateForm(Request $req){
+        $data = Band::find($req->id);
+        $data->bandnaam = $req->input('bandNaam');
+        $data->biografie = $req->input('biografie');
+        $data->tekstkleur = $req->input('textKleur');
+        $data->achtergrondkleur = $req->input('achtergrondKleur');
+        $data->themakleur = $req->input('themaKleur');
+        $data->url1 = $this->getYoutubeEmbedUrl($req->input('video1'));
+        $data->url2 = $this->getYoutubeEmbedUrl($req->input('video2'));
+        $data->url3 = $this->getYoutubeEmbedUrl($req->input('video3'));
+        $data->banner = $req->input('base64data');
+        $data->save();
+        return redirect("/edit/" . $data->id);
+    }
 }
