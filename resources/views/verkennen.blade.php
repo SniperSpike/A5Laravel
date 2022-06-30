@@ -2,10 +2,9 @@
 
 @section('content')
 <div class="container  col-sm-12 verkennenWrapper">
-    <form action="">
         <form action="{{url('bands.index')}}" method="post" class="searchBar">
         @csrf
-        <input type="text" name="keyword" placeholder="Zoek door onze bibliotheek...">
+        <input type="text" name="term" placeholder="Zoek door onze bibliotheek...">
         <button>
             <img src="{{asset('images/search.svg')}}" alt="">
         </button>

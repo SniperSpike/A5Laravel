@@ -34,7 +34,7 @@ class VerkennenController extends Controller
         //     }]
         // ])
 
+        // return view('verkennen', compact('band'),['bands' => $band]);
         return view('verkennen', compact('band'),['bands' => $band]);
-        // return view('bands.index', compact('band'))->with('i', request()->input('page', 1(-1) *5);
     }
 }
