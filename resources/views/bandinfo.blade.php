@@ -93,7 +93,7 @@
             </div>
             <div class="info">
                 <div class="bio">
-                    <h2 style="color: {{$value->themakleur}}">biographie</h2>
+                    <h2 style="color: {{$value->themakleur}}">biografie</h2>
                     <p style="color: {{$value->tekstkleur}} !important;">{{$value->biografie}}</p>
                 </div>
                 <div class="muziek">

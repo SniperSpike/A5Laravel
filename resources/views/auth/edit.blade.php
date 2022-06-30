@@ -160,7 +160,7 @@
                 <div class="info">
                     <div class="bio">
                         <header class="bio_header">
-                            <h2 style="color: {{$value->themakleur}};">biographie</h2>
+                            <h2 style="color: {{$value->themakleur}};">biografie</h2>
                             <span class="bio_edit">Edit</span>
                         </header>
                         <textarea id="bio_textarea" name="biografie" style="color: {{$value->tekstkleur}}; background-color: {{$value->achtergrondkleur}};" readonly>{{$value->biografie}}</textarea>
