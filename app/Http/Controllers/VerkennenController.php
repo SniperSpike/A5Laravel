@@ -20,21 +20,11 @@ class VerkennenController extends Controller
         $keyword = $request->keyword;
 
         if (isset($keyword)) {
-            $band = Band::search($keyword);
+            $band = Band::search($keyword)->get();
         } else {
             $band = Band::all();
         }
 
-        // $bands = Band::where([
-        //     ['bandnaam', '!=', Null],
-        //     [function ($query) use ($request) {
-        //         if(($term = $request->term)) {
-        //             $query->orWhere('bandnaam', 'LIKE', '%' . $term . '%')->get();
-        //         }
-        //     }]
-        // ])
-
-        // return view('verkennen', compact('band'),['bands' => $band]);
         return view('verkennen', compact('band'),['bands' => $band]);
     }
 }

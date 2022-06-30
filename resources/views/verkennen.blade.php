@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container  col-sm-12 verkennenWrapper">
-        <form action="{{url('bands.index')}}" method="post" class="searchBar">
+        {!! Form::open(['method'=>'GET','url'=>'/verkennen/','class'=>'searchBar','role'=>'search'])  !!}
         @csrf
         <input type="text" name="keyword" placeholder="Zoek door onze bibliotheek...">
         <button>
             <img src="{{asset('images/search.svg')}}" alt="">
         </button>
-    </form>
+        {!! Form::close() !!}
 
     <h3>Onze bibliotheek</h3>
     <div class="verkenItems">
