@@ -11,12 +11,12 @@
             @if(Auth::check())
             <a href="{{route('dashboard')}}"><button class="cta-btn">Naar dashboard</button></a>
             @endif
-            <div class="searchBar">
-                <input type="text" placeholder="Zoek door onze bibliotheek...">
+            {!! Form::open(['method'=>'GET','url'=>'/verkennen/','class'=>'searchBar','role'=>'search'])  !!}
+                <input type="text" name="keyword" placeholder="Zoek door onze bibliotheek...">
                 <button>
                     <img src="{{asset('images/search.svg')}}" />
                 </button>
-            </div>
+            {!! Form::close() !!}
         </div>
         <img src="{{asset('images/calltoaction.svg')}}" alt="cta-banner">
     </div>
@@ -27,7 +27,7 @@
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
                 <br><br>
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem . 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem .
             </p>
         </article>
         <img src="{{asset('images/about.svg')}}" alt="">
