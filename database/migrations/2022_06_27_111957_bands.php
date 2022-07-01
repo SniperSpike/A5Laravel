@@ -23,12 +23,13 @@ return new class extends Migration
             $table->string('url1');
             $table->string('url2');
             $table->string('url3');
-            $table->binary('banner');
-            $table->binary('libary');
             $table->timestamps();
         });
-    }
 
+        DB::statement("ALTER TABLE bands ADD banner LONGBLOB");
+        DB::statement("ALTER TABLE bands ADD library LONGBLOB");
+    
+    }
     /**
      * Reverse the migrations.
      *
