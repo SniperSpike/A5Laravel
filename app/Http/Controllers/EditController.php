@@ -85,4 +85,11 @@ class EditController extends Controller
         $data->delete();
         return redirect('dashboard');
     }
+
+    public function innerJoin($id) {        
+        $beheer = DB::table('beheer')
+        ->join('users', '=' , 'users.id')
+        ->join('bands', '=' , 'bands.id')
+        ->get();
+    }
 }
