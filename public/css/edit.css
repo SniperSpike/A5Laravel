@@ -159,6 +159,7 @@ footer {
 }
 #overlay .top .circleBox .circleBtn:hover {
   background-color: #5953bd;
+  cursor: pointer;
 }
 #overlay .top .inviteBtn {
   border-radius: 10px;
@@ -216,7 +217,9 @@ footer {
   background-color: #4b44b2;
 }
 
-#popupBtn {
+#popupBtn,
+#LibraryPopupBtn,
+#editLibrary {
   display: none;
 }
 

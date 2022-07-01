@@ -101,12 +101,16 @@
                     <button class="inviteBtn">Uitnodigen</button>
                 </div>
                 <div class="settingsBox circleBox">
-                    <a href="#">
-                        <div class="circleBtn">
-                            <img src="{{asset('images/icons/Icon-awesome-file-image.svg')}}" alt="image-icon">
-                        </div>
-                    </a>
-                    <a href="/edit/delete/{{$value->id}}">
+                    <div id="library" title="Library foto aanpassen">
+                        <label for="editLibrary">
+                            <div class="circleBtn">
+                                <img src="{{asset('images/icons/Icon-awesome-file-image.svg')}}" alt="image-icon">
+                            </div>
+                        </label>
+                        <input type="file" name="library" id="editLibrary" />
+                        <input type="hidden" name="LibraryBase64data" id="LibraryBase64data" value="{{$value->library}}"/>
+                    </div>
+                    <a href="/edit/delete/{{$value->id}}" title="Band verwijderen">
                         <div class="circleBtn">
                             <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon">
                         </div>
@@ -168,19 +172,19 @@
                     <div class="muziek">
                         <h2 style="color: {{$value->themakleur}};">muziek</h2>
 
-                        <!-- Button trigger modal -->
+                        <!-- Button trigger Banner modal -->
                         <button type="button" id="popupBtn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#bannerModal">
         
                         </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        <!-- Banner Modal -->
+                        <div class="modal fade" id="bannerModal" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   
                                 <div class="modal-content modal-dialog modal-xl">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Band banner croppen</h5>
+                                        <h5 class="modal-title" id="bannerModalLabel">Band banner croppen</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -188,7 +192,7 @@
                                         <div class="img-container">
                                             <div class="row">
                                                 <div class="col-mid-11">
-                                                    <img id="image" src="" alt="">
+                                                    <img id="bannerImage" src="" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -196,11 +200,47 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button id="crop" type="button" class="btn btn-cropImage" data-bs-dismiss="modal">Save changes</button>
+                                        <button id="cropBanner" type="button" class="btn btn-cropImage" data-bs-dismiss="modal">Save changes</button>
                                     </div>
                                 </div>
                         </div>
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                        {{-- End Modal --}}
+
+                        <!-- Button trigger Library modal -->
+                        <button type="button" id="LibraryPopupBtn" data-bs-toggle="modal"
+                            data-bs-target="#libraryModal">
+        
+                        </button>
+
+                        <!-- Banner Modal -->
+                        <div class="modal fade" id="libraryModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  
+                                <div class="modal-content modal-dialog modal-xl">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="libraryModalLabel">Band library croppen</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="img-container">
+                                            <div class="row">
+                                                <div class="col-mid-11">
+                                                    <img id="libraryImage" src="" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button id="cropLibrary" type="button" class="btn btn-cropImage" data-bs-dismiss="modal">Save changes</button>
+                                    </div>
+                                </div>
+                        </div>
+                        {{-- End Modal --}}
+
+                        {{-- <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <iframe width="100%" height="300" src="{{$value->url1}}"
@@ -231,7 +271,7 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -256,9 +296,9 @@
     $.fn.hasAttr = function(name) {  
         return this.attr(name) !== undefined;
     };  
-    $('documment').ready(function () {
-        const $modal = $('#exampleModal');
-        const image = document.getElementById('image');
+    $('document').ready(function () {
+        const bannerImage = document.getElementById('bannerImage');
+        const libraryImage = document.getElementById('libraryImage');
         let cropper;
 
         function readURL(input) {
@@ -270,12 +310,13 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-      
+
+        // cropper js voor Banner      
 
         $('body').on("change", "#editBanner", function (e) {
             var files = e.target.files;
             var done = function (url) {
-                image.src = url;
+                bannerImage.src = url;
                 // scuffed fix omdat Ik in geen 100 jaar $('#modalnaam').modal('show') werkend kon krijgen. F**k Bootstrap v5.2
                 $('#popupBtn').click();
             };
@@ -296,21 +337,21 @@
             }
         });
 
-        var myModal = document.getElementById('exampleModal')
+        var bannerModal = document.getElementById('bannerModal')
 
-        myModal.addEventListener('shown.bs.modal', function () {
-            cropper = new Cropper(image, {
+        bannerModal.addEventListener('shown.bs.modal', function () {
+            cropper = new Cropper(bannerImage, {
                 aspectRatio: 19 / 7,
                 viewMode: 3,
                 responsive: true,
             });
         })
-        myModal.addEventListener('hidden.bs.modal', function () {
+        bannerModal.addEventListener('hidden.bs.modal', function () {
             cropper.destroy();
             cropper = null;
         })
 
-        $('body').on('click', '#crop', function () {
+        $('body').on('click', '#cropBanner', function () {
 
             canvas = cropper.getCroppedCanvas({
                 width: 1272,
@@ -330,6 +371,63 @@
             })
         })
 
+        // cropper js voor Library
+
+        $('body').on("change", "#editLibrary", function (e) {
+            var files = e.target.files;
+            var done = function (url) {
+                libraryImage.src = url;
+                // scuffed fix omdat Ik in geen 100 jaar $('#modalnaam').modal('show') werkend kon krijgen. F**k Bootstrap v5.2
+                $('#LibraryPopupBtn').click();
+            };
+            var reader;
+            var file;
+            var url;
+            if (files && files.length > 0) {
+                file = files[0];
+                if (URL) {
+                    done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                    reader = new FileReader();
+                    reader.onload = function (e) {
+                        done(reader.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+        
+        var libraryModal = document.getElementById('libraryModal')
+
+        libraryModal.addEventListener('shown.bs.modal', function () {
+            cropper = new Cropper(libraryImage, {
+                aspectRatio: 4 / 6,
+                viewMode: 3,
+                responsive: true,
+            });
+        })
+        libraryModal.addEventListener('hidden.bs.modal', function () {
+            cropper.destroy();
+            cropper = null;
+        })
+
+        $('body').on('click', '#cropLibrary', function () {
+
+            canvas = cropper.getCroppedCanvas({
+                width: 400,
+                height: 600,
+            });
+
+            canvas.toBlob(function (blob) {
+                url = URL.createObjectURL(blob);
+                reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function(){
+                    let base64data = reader.result;
+                    $('#LibraryBase64data').val(base64data);
+                }
+            })
+        })
 
 
         $(".bio_edit").on('click', function(){

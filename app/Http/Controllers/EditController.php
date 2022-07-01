@@ -76,6 +76,7 @@ class EditController extends Controller
         $data->url2 = $this->getYoutubeEmbedUrl($req->input('video2'));
         $data->url3 = $this->getYoutubeEmbedUrl($req->input('video3'));
         $data->banner = $req->input('base64data');
+        $data->library = $req->input('LibraryBase64data');
         $data->save();
         return redirect("/edit/" . $data->id);
     }
