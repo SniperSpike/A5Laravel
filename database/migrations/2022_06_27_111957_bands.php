@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('url2');
             $table->string('url3');
             $table->binary('banner');
+            $table->binary('libary');
             $table->timestamps();
         });
     }
