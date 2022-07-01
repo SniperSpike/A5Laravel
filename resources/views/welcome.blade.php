@@ -50,6 +50,7 @@
             <a href="{{route('register')}}">Meld je gratis aan</a>
         </div>
     </div>
+    Dit is een test
     @endif
 </div>
 @endsection
