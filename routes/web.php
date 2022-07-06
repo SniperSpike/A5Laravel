@@ -22,7 +22,7 @@ Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'inde
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'innerJoin'])->name('dashboard');
 Route::get('/edit', [App\Http\Controllers\EditController::class, 'index'])->name('edit');
 Route::get('/edit/{id}', [App\Http\Controllers\EditController::class, 'editBand'])->name('editBand');
 Route::post('/edit/submit', [App\Http\Controllers\EditController::class, 'submitForm'])->name('edit.submitForm');

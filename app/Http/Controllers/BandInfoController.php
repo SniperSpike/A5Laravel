@@ -26,10 +26,5 @@ class BandInfoController extends Controller
             return redirect('verkennen');
         }
     }
-    public function innerJoin(User $user) {        
-        $beheer = DB::table('beheer')
-        ->join('users', '=' , 'users.id')
-        ->join('bands', '=' , 'bands.id')
-        ->get();
-    }
+
 }
