@@ -36,9 +36,9 @@
         <div class="tiles-container">
             <h1>Inspiratie</h1>
             <div class="tiles">
-                @for($i = 0; $i < 10; $i++)
-                    <img src="{{asset('images/test/inspiratie.png')}}">
-                @endfor
+                @foreach($band as $value)
+                    <div name="item" style="background:url({{$value->library}}) no-repeat center center; background-size: cover;" class="item"></div>
+                @endforeach
             </div>
         </div>
     </div>
