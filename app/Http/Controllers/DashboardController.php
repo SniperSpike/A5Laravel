@@ -25,12 +25,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $bands = DB::table('bands')->get();
-        return view('auth.dashboard', ['bands' => $bands]);
-    }
-
-    public function innerJoin() {        
-
         $beheer = DB::table('beheer')
         ->where('beheer.user_id', auth()->user()->id)
         ->join('bands', 'beheer.band_id', '=', 'bands.id')
@@ -39,4 +33,5 @@ class DashboardController extends Controller
 
         return view('auth.dashboard', ['bands' => $beheer]);
     }
+
 }
