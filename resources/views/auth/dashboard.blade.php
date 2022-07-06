@@ -6,7 +6,7 @@
     <h3>Mijn Bands</h3>
     <div class="bandListContainer">
     @foreach($bands as $value)
-    <a href="{{ url('edit/'.$value->id)}}">
+    <a href="{{ url('edit/'.$value->band_id)}}">
         <div class="bandItem" style="background:url({{$value->banner}}) no-repeat center center;">
             <p>{{$value->bandnaam}}</p>
         </div>
