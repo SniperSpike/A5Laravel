@@ -87,19 +87,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="settingsBox">
-                    <div class="header">
-                        <img src="{{asset('images/icons/icon-feather-mail.svg')}}" alt="settings icon">
-                        <h3>Bandlid Uitnodigen</h3>
-                    </div>
-                    <div class="contentBox">
-                        <div class="inputBox">
-                            <label for="inviteEmail" class="col-form-label">Email</label>
-                            <input id="inviteEmail" name="inviteEmail" type="text">
-                        </div>
-                    </div>
-                    <button class="inviteBtn">Uitnodigen</button>
-                </div>
                 <div class="settingsBox circleBox">
                     <div id="library" title="Library foto aanpassen">
                         <label for="editLibrary">
@@ -110,6 +97,7 @@
                         <input type="file" name="library" id="editLibrary" />
                         <input type="hidden" name="LibraryBase64data" id="LibraryBase64data" value="{{$value->library}}"/>
                     </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inviteModal" data-bs-whatever="@mdo">invite</button>
                     <a href="/edit/delete/{{$value->id}}" title="Band verwijderen">
                         <div class="circleBtn">
                             <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon">
@@ -276,15 +264,39 @@
 
                 </div>
             </div>
-
-
+            </form>
+                <!-- Invite Modal -->
+                <div class="modal fade" id="inviteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-content modal-dialog modal-md">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="inviteModalLabel">Nodig je bandlid uit!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form id="inviteForm" action="{{url('invite')}}" method="POST">
+                                @csrf
+                            <div class="modal-body">
+                                <div class="inputBox">
+                                    <label for="inviteEmail" class="col-form-label">Email</label>
+                                    <input id="inviteEmail" name="inviteEmail" type="text">
+                                    <input type="hidden" name="pageID" value="{{$value->id}}">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-cropImage" form="inviteForm">Uitnodigen</button>
+                            </div>
+                            </form>
+                        </div>
+                </div>
+                {{-- End Modal --}}
             <footer style="background-color: {{$value->themakleur}};">
                 <span>Copyright © 2022</span>
             </footer>
         </main>
     </div>
     @endforeach
-</form>
 </body>
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>

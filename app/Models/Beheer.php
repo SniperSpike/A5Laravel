@@ -10,4 +10,6 @@ class Beheer extends Model
     use HasFactory;
 
     protected $table = "beheer";
+
+
 }

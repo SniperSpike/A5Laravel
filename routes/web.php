@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 Route::get('/bandinfo', [App\Http\Controllers\BandInfoController::class, 'index'])->name('bandinfo');
 Route::get('/bandinfo/{id}', [App\Http\Controllers\BandInfoController::class, 'getBandInfo'])->name('getBandInfo');
 Route::get('/verkennen', [App\Http\Controllers\VerkennenController::class, 'index'])->name('verkennen');
@@ -29,3 +27,4 @@ Route::post('/edit/submit', [App\Http\Controllers\EditController::class, 'submit
 Route::post('/edit/update', [App\Http\Controllers\EditController::class, 'updateForm'])->name('edit.updateForm');
 Route::get('/edit/delete/{id}', [App\Http\Controllers\EditController::class, 'delete'])->name('edit.delete');
 Route::get('/edit{id}', [App\Http\Controllers\EditController::class, 'index'])->name('innerJoin');
+Route::post('/invite', [App\Http\Controllers\EditController::class, 'invite'])->name('invite');

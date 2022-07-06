@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Band;
 use App\Models\Beheer;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Auth;
 
@@ -108,6 +109,23 @@ class EditController extends Controller
         ->where('band_id', '=', $id)
         ->delete();
         return redirect('dashboard');
+    }
+
+    public function invite(Request $req){
+        $user = DB::table('users')->get()->where('email', '=', $req->inviteEmail);
+        foreach($user as $value){
+            $check = DB::table('beheer')
+            ->get()
+            ->where('band_id', '=', $req->pageID)
+            ->where('user_id', '=', $value->id);
+            if(!$check){
+                $data = new Beheer;
+                $data->user_id = $value->id;
+                $data->band_id = $req->pageID;
+                $data->save();
+            }
+        }
+        return redirect("/edit/" . $req->pageID);
     }
 
     // public function invite() {

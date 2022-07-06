@@ -36,7 +36,7 @@
         <div class="tiles-container">
             <h1>Inspiratie</h1>
             <div class="tiles">
-                @foreach($band as $value)
+                @foreach($bands as $value)
                     <div name="item" style="background:url({{$value->library}}) no-repeat center center; background-size: cover;" class="item"></div>
                 @endforeach
             </div>
