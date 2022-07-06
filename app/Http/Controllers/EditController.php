@@ -51,17 +51,21 @@ class EditController extends Controller
     }
 
     public function submitForm(Request $req){
-        Band::create([
-            'bandnaam' => $req->input('bandNaam'),
-            'biografie' => $req->input('biografie'),
-            'tekstkleur' => $req->input('textKleur'),
-            'achtergrondkleur' => $req->input('achtergrondKleur'),
-            'themakleur' => $req->input('themaKleur'),
-            'url1' => $this->getYoutubeEmbedUrl($req->input('video1')),
-            'url2' => $this->getYoutubeEmbedUrl($req->input('video2')),
-            'url3' => $this->getYoutubeEmbedUrl($req->input('video3')),
-            'banner' => $req->input('base64data'),
-        ]);
+        $data = new Band;
+        $data->bandnaam = $req->input('bandNaam');
+        $data->biografie = $req->input('biografie');
+        $data->tekstkleur = $req->input('textKleur');
+        $data->achtergrondkleur = $req->input('achtergrondKleur');
+        $data->themakleur = $req->input('themaKleur');
+        $data->url1 = $this->getYoutubeEmbedUrl($req->input('video1'));
+        $data->url2 = $this->getYoutubeEmbedUrl($req->input('video2'));
+        $data->url3 = $this->getYoutubeEmbedUrl($req->input('video3'));
+        $data->banner = $req->input('base64data');
+        $data->library = $req->input('LibraryBase64data');
+        $data->save();
+
+        
+
         return redirect('dashboard');
     }
 
