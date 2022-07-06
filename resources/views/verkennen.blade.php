@@ -15,7 +15,11 @@
         @foreach($band as $value)
         <a href="{{url('bandinfo/'. $value->id)}}">
             <div class="itemContainer">
+                @if($value->library !== null)
                 <div name="item" style="background:url({{$value->library}}) no-repeat center center; background-size: cover;" class="item"></div>
+                @else
+                <div name="item" style="background:url({{$value->banner}}) no-repeat center center; background-size: cover;" class="item"></div>
+                @endif
             </div>
             <p class="bandname">{{$value->bandnaam}}</p>
         </a>
