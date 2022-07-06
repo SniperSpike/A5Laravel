@@ -16,7 +16,7 @@ class EditController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        
+
     }
 
     /**
@@ -39,11 +39,11 @@ class EditController extends Controller
     {
          $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
          $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
-    
+
         if (preg_match($longUrlRegex, $url, $matches)) {
             $youtube_id = $matches[count($matches) - 1];
         }
-    
+
         if (preg_match($shortUrlRegex, $url, $matches)) {
             $youtube_id = $matches[count($matches) - 1];
         }
@@ -86,4 +86,14 @@ class EditController extends Controller
         $data->delete();
         return redirect('dashboard');
     }
+
+    // public function invite() {
+    //     $user = User::where('email', '=', Input::get('email'))->first();
+
+    //     if($user === null) {
+    //         echo '<script type="text/javascript">';
+    //         echo ' alert("JavaScript Alert Box by PHP")';  //not showing an alert box.
+    //         echo '</script>';
+    //     }
+    // }
 }

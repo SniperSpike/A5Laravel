@@ -52,7 +52,7 @@
                     </div>
                     <div class="contentBox">
                         <div class="colorContainer">
-                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="achtergrondColor" value="{{$value->achtergrondkleur}}" 
+                            <input type="color" class=" colorPicker" name="achtergrondKleur" id="achtergrondColor" value="{{$value->achtergrondkleur}}"
                                 title="Choose your color">
                             <h3>Achtergrond kleur</h3>
                         </div>
@@ -175,13 +175,13 @@
                         <!-- Button trigger Banner modal -->
                         <button type="button" id="popupBtn" data-bs-toggle="modal"
                             data-bs-target="#bannerModal">
-        
+
                         </button>
 
                         <!-- Banner Modal -->
                         <div class="modal fade" id="bannerModal" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  
+
                                 <div class="modal-content modal-dialog modal-xl">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="bannerModalLabel">Band banner croppen</h5>
@@ -209,13 +209,13 @@
                         <!-- Button trigger Library modal -->
                         <button type="button" id="LibraryPopupBtn" data-bs-toggle="modal"
                             data-bs-target="#libraryModal">
-        
+
                         </button>
 
                         <!-- Banner Modal -->
                         <div class="modal fade" id="libraryModal" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  
+
                                 <div class="modal-content modal-dialog modal-xl">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="libraryModalLabel">Band library croppen</h5>
@@ -291,11 +291,11 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
     // in samenwerking met:
-    // - stack overflow 
+    // - stack overflow
     // - VM Learning Hub (Youtuber)
-    $.fn.hasAttr = function(name) {  
+    $.fn.hasAttr = function(name) {
         return this.attr(name) !== undefined;
-    };  
+    };
     $('document').ready(function () {
         const bannerImage = document.getElementById('bannerImage');
         const libraryImage = document.getElementById('libraryImage');
@@ -311,7 +311,7 @@
             }
         }
 
-        // cropper js voor Banner      
+        // cropper js voor Banner
 
         $('body').on("change", "#editBanner", function (e) {
             var files = e.target.files;
@@ -396,7 +396,7 @@
                 }
             }
         });
-        
+
         var libraryModal = document.getElementById('libraryModal')
 
         libraryModal.addEventListener('shown.bs.modal', function () {
@@ -446,7 +446,7 @@
         $('textarea').on('change', function(){
             $("textarea").height( $("textarea")[0].scrollHeight );
         });
-        
+
         $("#bandNaam").on("input", function() {
             $("#band-title").html($(this).val());
         });
