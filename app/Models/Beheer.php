@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Beheer extends Model
 {
     use HasFactory;
+
+    protected $table = "beheer";
 }
