@@ -115,10 +115,10 @@ class EditController extends Controller
         $user = DB::table('users')->get()->where('email', '=', $req->inviteEmail);
         foreach($user as $value){
             $check = DB::table('beheer')
-            ->get()
             ->where('band_id', '=', $req->pageID)
-            ->where('user_id', '=', $value->id);
-            if(!$check){
+            ->where('user_id', '=', $value->id)
+            ->get();
+            if($check->count() === 0){
                 $data = new Beheer;
                 $data->user_id = $value->id;
                 $data->band_id = $req->pageID;
@@ -128,13 +128,4 @@ class EditController extends Controller
         return redirect("/edit/" . $req->pageID);
     }
 
-    // public function invite() {
-    //     $user = User::where('email', '=', Input::get('email'))->first();
-
-    //     if($user === null) {
-    //         echo '<script type="text/javascript">';
-    //         echo ' alert("JavaScript Alert Box by PHP")';  //not showing an alert box.
-    //         echo '</script>';
-    //     }
-    // }
 }

@@ -97,7 +97,7 @@
                         <input type="file" name="library" id="editLibrary" />
                         <input type="hidden" name="LibraryBase64data" id="LibraryBase64data" value="{{$value->library}}"/>
                     </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inviteModal" data-bs-whatever="@mdo">invite</button>
+                    <button type="button" class="circleBtn" data-bs-toggle="modal" data-bs-target="#inviteModal" data-bs-whatever="@mdo" title="Bandlid uitnodigen"> <img src="{{asset('images/icons/Icon-feather-user-plus.svg')}}" alt="invite-icon" style="width: 30px"></button>
                     <a href="/edit/delete/{{$value->id}}" title="Band verwijderen">
                         <div class="circleBtn">
                             <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon">
