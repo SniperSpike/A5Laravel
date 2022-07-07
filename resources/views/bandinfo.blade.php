@@ -18,10 +18,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bandinfo.css')}}" rel="stylesheet">
-
-
-
-
+    
 </head>
 
 <body style="background-color: {{$value->achtergrondkleur}}">
@@ -54,7 +51,7 @@
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
-                            <a href="{{ route('login') }}"><button type="button" class="btn btn-login"><img
+                            <a href="{{ route('login') }}"><button type="button" class="btn btn-login" style="background-color: {{$value->themakleur}} !important;"><img
                                         class="loginIcon" src="{{asset('images/loginBtn.svg')}}" /> Login</button></a>
                         </li>
                         @endif
