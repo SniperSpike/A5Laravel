@@ -3,7 +3,7 @@ A5 Laravel / MVC eindopdracht in samenwerking met Niels
 
 Een Electronic Press Kit heeft een aantal essentiële eigenschappen nodig om aan de eisen te voldoen. 
 
-- [x] Denk hierbij aan een inlog systeem voor de gebruikers van de EPK.
+- [:heavy_check_mark:] Denk hierbij aan een inlog systeem voor de gebruikers van de EPK.
 - [x] De gebruikers moeten meer dan één band onder zijn/haar beheer kunnen hebben.
 - [ ] Gebruikers kunnen mensen uitnodigen om gezamenlijk een band te beheren. 
 - [x] De gebruikers moeten elk hun eigen bands kunnen beheren.
