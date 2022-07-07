@@ -98,11 +98,7 @@
                         <input type="hidden" name="LibraryBase64data" id="LibraryBase64data" value="{{$value->library}}"/>
                     </div>
                     <button type="button" class="circleBtn" data-bs-toggle="modal" data-bs-target="#inviteModal" data-bs-whatever="@mdo" title="Bandlid uitnodigen"> <img src="{{asset('images/icons/Icon-feather-user-plus.svg')}}" alt="invite-icon" style="width: 30px"></button>
-                    <a href="/edit/delete/{{$value->id}}" title="Band verwijderen">
-                        <div class="circleBtn">
-                            <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon">
-                        </div>
-                    </a>
+                    <button type="button" class="circleBtn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@mdo" title="Band verwijderen"> <img src="{{asset('images/icons/Icon-material-delete-forever.svg')}}" alt="delete-icon"></button>
                 </div>
             </div>
             <div class="bottom">
@@ -225,6 +221,26 @@
                                         <button id="cropLibrary" type="button" class="btn btn-cropImage" data-bs-dismiss="modal">Save changes</button>
                                     </div>
                                 </div>
+                        </div>
+                        {{-- End Modal --}}
+
+                        <!-- Delete Modal -->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-content modal-dialog modal-md">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="inviteModalLabel">Verwijder {{$value->bandnaam}}!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <span>Weet je zeker dat je {{$value->bandnaam}} wilt verwijderen?</span>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Annuleren</button>
+                                    <a href="/edit/delete/{{$value->id}}" class="btn btn-cropImage">Verwijderen</a>
+                                </div>
+                            </div>
                         </div>
                         {{-- End Modal --}}
 

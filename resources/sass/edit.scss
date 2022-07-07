@@ -13,6 +13,11 @@ footer {
     z-index: 300;
 }
 
+.btn-cropImage {
+    background-color: $primaryColor;
+    color: white;
+}
+
 #overlay {
     position: fixed;
     right: 0;
@@ -189,11 +194,6 @@ footer {
 
     .modal-content {
         width: fit-content;
-    }
-
-    .btn-cropImage {
-        background-color: $primaryColor;
-        color: white;
     }
 
     .cropper-container {
