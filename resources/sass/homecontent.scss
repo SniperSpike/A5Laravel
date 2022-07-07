@@ -41,7 +41,7 @@
                 background-color: #ffffff;
                 margin-bottom: -11em;
                 margin-top: 6em;
-        
+
                 button {
                     background-color: $primaryColor;
                     padding: 0.5em;
@@ -162,9 +162,12 @@
                 display: flex;
                 flex-wrap: wrap;
 
-                img {
-                    width: 210px;
-                    height: 210px;
+                div {
+                    width: 200px;
+                    height: 200px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
                     object-fit: contain;
                     border-radius: 20px;
                 }
@@ -180,7 +183,7 @@
         // border: 2px solid black;
 
         .interesse  {
-            
+
             width: 50%;
             height: auto;
             font-size: 22px;
@@ -202,7 +205,7 @@
 }
 
 @media only screen and (max-width: $breakpoint-small-screen) {
-    
+
 
     .personalised-wrapper {
         img {

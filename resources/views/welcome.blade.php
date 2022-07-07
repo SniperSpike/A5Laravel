@@ -37,7 +37,9 @@
             <h1>Inspiratie</h1>
             <div class="tiles">
                 @foreach($bands as $value)
-                    <div name="item" style="background:url({{$value->library}}) no-repeat center center; background-size: cover;" class="item"></div>
+                <a href="{{url('bandinfo/'. $value->id)}}">
+                    <div name="item" style="background-image:url({{$value->library}});" class="item"></div>
+                </a>
                 @endforeach
             </div>
         </div>

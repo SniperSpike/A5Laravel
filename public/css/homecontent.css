@@ -201,9 +201,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles img {
-  width: 210px;
-  height: 210px;
+.homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles div {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 20px;
