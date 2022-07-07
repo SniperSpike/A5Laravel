@@ -26,5 +26,5 @@ Route::get('/edit/{id}', [App\Http\Controllers\EditController::class, 'editBand'
 Route::post('/edit/submit', [App\Http\Controllers\EditController::class, 'submitForm'])->name('edit.submitForm');
 Route::post('/edit/update', [App\Http\Controllers\EditController::class, 'updateForm'])->name('edit.updateForm');
 Route::get('/edit/delete/{id}', [App\Http\Controllers\EditController::class, 'delete'])->name('edit.delete');
-Route::get('/edit{id}', [App\Http\Controllers\EditController::class, 'index'])->name('innerJoin');
 Route::post('/invite', [App\Http\Controllers\EditController::class, 'invite'])->name('invite');
+Route::get('/edit/{page}/{id}', [App\Http\Controllers\EditController::class, 'deleteBandLid'])->name('edit.deleteBandLid');

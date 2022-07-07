@@ -229,6 +229,39 @@ footer {
   display: none;
 }
 
+.inviteBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Arial;
+}
+.inviteBox label {
+  color: #adaabb;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: -0.4em;
+  margin-left: 2px;
+}
+.inviteBox input {
+  color: black;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #adaabb;
+  width: 100%;
+  font-size: 18px;
+}
+.inviteBox input:focus {
+  outline: none;
+}
+
+#inviteTable {
+  margin-top: 2em;
+}
+
 .editWrapper {
   display: -webkit-box;
   display: -ms-flexbox;

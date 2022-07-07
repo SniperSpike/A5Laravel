@@ -292,11 +292,27 @@
                             <form id="inviteForm" action="{{url('invite')}}" method="POST">
                                 @csrf
                             <div class="modal-body">
-                                <div class="inputBox">
+                                <div class="inviteBox">
                                     <label for="inviteEmail" class="col-form-label">Email</label>
-                                    <input id="inviteEmail" name="inviteEmail" type="text">
+                                    <input id="inviteEmail" name="inviteEmail" type="email" required>
                                     <input type="hidden" name="pageID" value="{{$value->id}}">
                                 </div>
+                                <table id="inviteTable" class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Band lid</th>
+                                        <th scope="col" style="width: 20px">Opties</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($beheer as $beheerValue)
+                                        <tr>
+                                            <td>{{$beheerValue->name}}</td>
+                                            <td><a class="btn btn-cropImage" href="/edit/{{$value->id}}/{{$beheerValue->user_id}}">Verwijderen</a></td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                  </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary"

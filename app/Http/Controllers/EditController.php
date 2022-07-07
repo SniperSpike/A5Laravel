@@ -29,7 +29,7 @@ class EditController extends Controller
      */
     public function index()
     {
-        return view('auth.create', ['band' => []]);
+        return view('auth.create', ['band' => [], 'beheer' => []]);
     }
 
     public function editBand($id){
@@ -40,8 +40,14 @@ class EditController extends Controller
         ->where('user_id', auth()->user()->id)
         ->get();
 
+        $getBeheer = DB::table('beheer')
+        ->where('band_id', '=', $id)
+        ->where('user_id', '!=', auth()->user()->id)
+        ->join('users', 'beheer.user_id', '=', 'users.id')
+        ->get();
+
         if(count($beheer) > 0){
-            return view('auth.edit', ['band' => $band]);
+            return view('auth.edit', ['band' => $band], ['beheer' => $getBeheer]);
         }else{
             return redirect('dashboard');
         }
@@ -80,6 +86,7 @@ class EditController extends Controller
         $beheer = new Beheer;
         $beheer->user_id = auth()->user()->id;
         $beheer->band_id = $band->id;
+        $beheer->eigenaar = 1;
         $beheer->save();
 
         return redirect('dashboard');
@@ -126,6 +133,21 @@ class EditController extends Controller
             }
         }
         return redirect("/edit/" . $req->pageID);
+    }
+
+    public function deleteBandLid($page, $id){
+        $user = DB::table('beheer')
+        ->where('user_id', auth()->user()->id)
+        ->get();
+        foreach($user as $value){
+            if($value->band_id == $page && $value->eigenaar == 1){
+                DB::table('beheer')
+                ->where('user_id', $id)
+                ->where('band_id', $page)
+                ->delete();
+            }
+        }
+        return redirect('/edit/'. $page);
     }
 
 }

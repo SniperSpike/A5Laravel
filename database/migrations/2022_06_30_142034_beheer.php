@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id('id');
             $table->integer('band_id');
             $table->integer('user_id');
+            $table->boolean('eigenaar')->default(0);
             $table->timestamps();
         });
     }

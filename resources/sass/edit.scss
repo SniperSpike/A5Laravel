@@ -178,6 +178,35 @@ footer {
     display: none;
 }
 
+.inviteBox {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    label {
+        color: $secondaryColor;
+        font-weight: bold;
+        padding: 0;
+        margin-bottom: -0.4em;
+        margin-left: 2px;
+    }
+    input {
+        color: black;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid $secondaryColor;
+        width: 100%;
+
+        font-size: 18px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+#inviteTable {
+    margin-top: 2em;
+}
+
 .editWrapper {
     display: flex;
     flex-direction: column;
