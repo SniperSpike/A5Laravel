@@ -28,3 +28,4 @@ Route::post('/edit/update', [App\Http\Controllers\EditController::class, 'update
 Route::get('/edit/delete/{id}', [App\Http\Controllers\EditController::class, 'delete'])->name('edit.delete');
 Route::post('/invite', [App\Http\Controllers\EditController::class, 'invite'])->name('invite');
 Route::get('/edit/{page}/{id}', [App\Http\Controllers\EditController::class, 'deleteBandLid'])->name('edit.deleteBandLid');
+Route::get('/settings', [App\Http\Controllers\SettingsController::class, 'index'])->name('settings');

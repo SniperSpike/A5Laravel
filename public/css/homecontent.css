@@ -198,6 +198,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -245,7 +246,6 @@
   .personalised-wrapper img {
     border-radius: 0px !important;
   }
-
   .cta-container .searchBar {
     margin-bottom: 0 !important;
     margin-top: 1em !important;
@@ -261,7 +261,6 @@
     position: relative;
     font-size: 14px;
   }
-
   .about-wrapper article {
     width: 100% !important;
     padding: 1em !important;
@@ -269,7 +268,6 @@
   .about-wrapper img {
     display: none !important;
   }
-
   .inspiratie-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -294,7 +292,6 @@
     border-radius: 0px !important;
     padding: 10px !important;
   }
-
   .interesse a {
     font-size: 19px !important;
   }
