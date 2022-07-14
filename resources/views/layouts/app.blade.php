@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden">
     <div id="loading">
         <img src="{{asset('images/loading.svg')}}" alt="Loading...">
     </div>
@@ -109,6 +109,7 @@
     };
     $('document').ready(function () {  
         $('#loading').css('opacity', '0');
+        $('body').css('overflow', 'auto');
     });
 </script>
 </html>
