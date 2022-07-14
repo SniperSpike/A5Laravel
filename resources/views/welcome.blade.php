@@ -43,7 +43,9 @@
                 </a>
                 @endforeach --}}
                 @for($i = 0; $i < 10; $i++)
-                    <div name="item" style="background-image:url(https://source.unsplash.com/random/500×500/?band&sig={{$i}});" class="item"></div>
+                    <a href="{{url('verkennen')}}">
+                        <div name="item" style="background-image:url(https://source.unsplash.com/random/500×500/?band&sig={{$i}});" class="item"></div>
+                    </a>
                 @endfor
             </div>
         </div>

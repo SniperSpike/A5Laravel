@@ -26,7 +26,9 @@
 @foreach($band as $value)
 <body style="background-color: {{$value->achtergrondkleur}};">
     <div id="app">
-
+        <div id="loading">
+            <img src="{{asset('images/loading.svg')}}" alt="Loading...">
+        </div>
         <form action="{{url('edit/update')}}" method="POST">
         @csrf
         <input type="hidden" name="id" value="{{$value->id}}">
@@ -473,6 +475,10 @@
             })
         })
 
+        $('document').ready(function () {  
+            $('#loading').css('opacity', '0');
+            $('body').css('overflow', 'auto');
+        });
 
         $(".bio_edit").on('click', function(){
             if($('#bio_textarea').hasAttr("readonly")){

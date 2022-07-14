@@ -25,6 +25,9 @@
 </head>
 
 <body>
+    <div id="loading">
+        <img src="{{asset('images/loading.svg')}}" alt="Loading...">
+    </div>
     <div id="app">
         <form action="{{url('edit/submit')}}" method="POST">
             @csrf
@@ -227,7 +230,11 @@
     $.fn.hasAttr = function(name) {  
         return this.attr(name) !== undefined;
     };  
+
     $('documment').ready(function () {
+        $('#loading').css('opacity', '0');
+        $('body').css('overflow', 'auto');
+
         const $modal = $('#exampleModal');
         const image = document.getElementById('image');
         let cropper;

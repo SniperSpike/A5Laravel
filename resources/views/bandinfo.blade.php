@@ -22,6 +22,9 @@
 </head>
 
 <body style="background-color: {{$value->achtergrondkleur}}">
+    <div id="loading">
+        <img src="{{asset('images/loading.svg')}}" alt="Loading...">
+    </div>
     <div id="app">
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white" style="background-color: {{$value->achtergrondkleur}} !important;">
             <div class="container">
@@ -139,8 +142,14 @@
 </body>
 @endforeach
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}"></script>
 <script>
+
+    $('document').ready(function () {  
+        $('#loading').css('opacity', '0');
+        $('body').css('overflow', 'auto');
+    });
+
     function rgbToHexBasedOnBg(bgColor, lightColor, darkColor) {
         let rgb = bgColor.substring(4, bgColor.length-1)
         .replace(/ /g, '')
