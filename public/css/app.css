@@ -11439,7 +11439,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.loading {
+#loading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11454,6 +11454,6 @@ textarea.form-control-lg {
   height: 100vh;
   background-color: white;
   z-index: 9999;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }

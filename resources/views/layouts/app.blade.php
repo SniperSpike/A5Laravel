@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div class="loading">
+    <div id="loading">
         <img src="{{asset('images/loading.svg')}}" alt="Loading...">
     </div>
     <div id="app">
@@ -108,7 +108,7 @@
         return this.attr(name) !== undefined;
     };
     $('document').ready(function () {  
-        $('.loading').fadeOut();
+        $('#loading').css('opacity', '0');
     });
 </script>
 </html>

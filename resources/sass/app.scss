@@ -7,7 +7,7 @@
 // Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.loading {
+#loading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,5 +16,5 @@
     height: 100vh;
     background-color: white;
     z-index: 9999;
-    transition: all 0.3s;
+    transition: opacity 0.5s;
 }
