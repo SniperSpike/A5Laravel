@@ -174,7 +174,7 @@
   margin-bottom: 5em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container {
-  background: linear-gradient(45deg, #433da0, #91528d);
+  background: linear-gradient(45deg, #433da0, #6d4895);
   border-radius: 50px 0px 0px 50px;
   color: #ffffff;
   display: -webkit-box;
@@ -186,8 +186,8 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 40px 40px 40px 40px;
-  width: 1366px;
+  padding: 40px 40px 40px 70px;
+  width: 1266px;
   height: auto;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container h1 {
