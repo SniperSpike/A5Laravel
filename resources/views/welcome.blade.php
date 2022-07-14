@@ -25,9 +25,10 @@
         <article>
             <h1>Over EPK Media</h1>
             <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                EPK Media, kort voor Electronic Band Press is een platform waar bands diverse pagina's kunnen aanmaken en de pagina naar eigen smaak inrichten om hun muziek te promoten.
                 <br><br>
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem .
+                Deze pagina's kunnen gedeeld worden met andere bandleden om zo een pagina gezamenlijk te kunnen beheren. Op deze pagina's staat onder andere een korte biografie met foto's en muziekvideo's.
+                Het idee is hierbij dat bands zichzelf eenvoudig kunnen promoten en hun muziek delen met eventuele liefhebbers. 
             </p>
         </article>
         <img src="{{asset('images/about.svg')}}" alt="">
