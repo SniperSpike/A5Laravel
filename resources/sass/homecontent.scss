@@ -15,9 +15,7 @@
         justify-content: center;
         width: 100%;
         height: auto;
-        // border: 2px solid black;
         object-fit: cover;
-        // margin-top: 2em;
 
         .cta-container {
             position: absolute;
@@ -183,8 +181,7 @@
         height: auto;
         // border: 2px solid black;
 
-        .interesse  {
-
+        .interesse {
             width: 50%;
             height: auto;
             font-size: 22px;
@@ -206,8 +203,6 @@
 }
 
 @media only screen and (max-width: $breakpoint-small-screen) {
-
-
     .personalised-wrapper {
         img {
             border-radius: 0px !important;
@@ -215,7 +210,6 @@
     }
 
     .cta-container {
-
         .searchBar {
             margin-bottom: 0 !important;
             margin-top: 1em !important;
@@ -233,7 +227,6 @@
             width: 100% !important;
             position: relative;
             font-size: 14px;
-
         }
     }
 

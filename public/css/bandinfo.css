@@ -1,11 +1,6 @@
 .bandInfoWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2em;
   margin-top: -1em;
   margin-bottom: 5em;
@@ -27,20 +22,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 4em;
   text-shadow: 3px 2px #1a2542;
   text-align: center;
 }
 .bandInfoWrapper .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 5em;
 }
 .bandInfoWrapper .info .bio,
@@ -61,13 +51,8 @@
 }
 @media (max-width: 1200px) {
   .bandInfoWrapper .info {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-pack: unset !important;
-        -ms-flex-pack: unset !important;
-            justify-content: unset !important;
+    flex-direction: column !important;
+    justify-content: unset !important;
     gap: unset !important;
   }
   .bandInfoWrapper .bio,

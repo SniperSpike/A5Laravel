@@ -26,6 +26,9 @@
 </head>
 
 <body>
+    <div class="loading">
+        <img src="{{asset('images/loading.svg')}}" alt="Loading...">
+    </div>
     <div id="app">
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white">
             <div class="container">
@@ -99,6 +102,13 @@
 </body>
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
-
+<script src="{{ asset('js/app.js') }}"></script>
+<script>
+    $.fn.hasAttr = function(name) {
+        return this.attr(name) !== undefined;
+    };
+    $('document').ready(function () {  
+        $('.loading').fadeOut();
+    });
+</script>
 </html>
