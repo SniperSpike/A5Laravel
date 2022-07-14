@@ -37,11 +37,14 @@
         <div class="tiles-container">
             <h1>Inspiratie</h1>
             <div class="tiles">
-                @foreach($bands as $value)
+                {{-- @foreach($bands as $value)
                 <a href="{{url('bandinfo/'. $value->id)}}">
                     <div name="item" style="background-image:url({{$value->library}});" class="item"></div>
                 </a>
-                @endforeach
+                @endforeach --}}
+                @for($i = 0; $i < 10; $i++)
+                    <div name="item" style="background-image:url(https://source.unsplash.com/random/500×500/?band&sig={{$i}});" class="item"></div>
+                @endfor
             </div>
         </div>
     </div>
