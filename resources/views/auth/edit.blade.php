@@ -343,6 +343,9 @@
         return this.attr(name) !== undefined;
     };
     $('document').ready(function () {
+        $('#loading').css('opacity', '0');
+        $('body').css('overflow', 'auto');
+
         const bannerImage = document.getElementById('bannerImage');
         const libraryImage = document.getElementById('libraryImage');
         let cropper;
@@ -474,11 +477,6 @@
                 }
             })
         })
-
-        $('document').ready(function () {  
-            $('#loading').css('opacity', '0');
-            $('body').css('overflow', 'auto');
-        });
 
         $(".bio_edit").on('click', function(){
             if($('#bio_textarea').hasAttr("readonly")){
