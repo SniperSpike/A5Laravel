@@ -16,6 +16,10 @@ footer {
 .btn-cropImage {
     background-color: $primaryColor;
     color: white;
+    &:hover {
+        color: white;
+        background-color: lighten($primaryColor, 10%);
+    }
 }
 
 #overlay {

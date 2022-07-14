@@ -99,15 +99,15 @@
         height: auto;
         object-fit: contain;
         margin-top: 5em;
-        gap: 8em;
-        // border: 2px solid black;
+        // gap: 20%;
+        margin-left: 6%;
 
         article {
             width: 30%;
             height: auto;
             font-family: Berlin Sans FB;
-            // margin-top: 2em;
-            // border: 2px solid black;
+            flex: 1;
+            max-width: 40%;
             h1 {
                 font-weight: normal;
                 color: $fontColor;
@@ -231,7 +231,9 @@
     }
 
     .about-wrapper {
+        margin-left: 0 !important;
         article {
+            max-width: 100% !important;
             width: 100% !important;
             padding: 1em !important;
         }
