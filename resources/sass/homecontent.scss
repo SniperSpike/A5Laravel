@@ -152,7 +152,7 @@
                 padding: 20px 20px 20px 20px;
                 font-weight: normal;
                 font-family: Berlin Sans FB;
-                margin-bottom: 1em;
+                // margin-bottom: 1em;
             }
 
             .tiles {
@@ -263,6 +263,7 @@
         display: flex;
         justify-content: center !important;
         padding: 0px !important;
+        background: unset !important;
 
         h1 {
             font-size: 2rem !important;

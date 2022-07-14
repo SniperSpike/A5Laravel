@@ -195,7 +195,6 @@
   padding: 20px 20px 20px 20px;
   font-weight: normal;
   font-family: Berlin Sans FB;
-  margin-bottom: 1em;
 }
 .homecontent-wrapper .inspiratie-wrapper .tiles-container .tiles {
   gap: 5em 1em;
@@ -311,6 +310,7 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
     padding: 0px !important;
+    background: unset !important;
   }
   .inspiratie-wrapper h1 {
     font-size: 2rem !important;
