@@ -223,27 +223,54 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: auto;
+  background: url("/images/blob.svg") no-repeat center;
+  height: 720px;
+  margin-top: -3em;
+  margin-bottom: 7em;
 }
 .homecontent-wrapper .interesse-wrapper .interesse {
-  width: 50%;
+  width: 540px;
   height: auto;
   font-size: 22px;
   font-family: Berlin Sans FB;
   text-align: center;
-  margin-bottom: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.homecontent-wrapper .interesse-wrapper .interesse h1 {
+  font-weight: normal;
+  font-size: 40px;
+  color: #1a2542;
+}
+.homecontent-wrapper .interesse-wrapper .interesse p {
+  color: #1a2542;
 }
 .homecontent-wrapper .interesse-wrapper .interesse a {
-  font-size: 22px;
+  margin-top: 1em;
+  font-size: 20px;
   border-radius: 40px;
   text-decoration: none;
   color: #ffffff;
   background: #433da0;
-  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-block: 0.8em;
+  padding-inline: 1.5em;
 }
 
 @media only screen and (max-width: 1024px) {
