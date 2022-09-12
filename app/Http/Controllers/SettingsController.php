@@ -18,10 +18,12 @@ class SettingsController extends Controller
 
     public function updateForm(Request $req){
         if (Auth::check()) {
-            $user = Auth::user();
-            $user->name = $req->input('username');
-            $user->email = $req->input('email');
-            $user->save();
+            if(!empty($req->input('username')) && !empty($req->input('email'))){
+                $user = Auth::user();
+                $user->name = $req->input('username');
+                $user->email = $req->input('email');
+                $user->save();
+            }
         }
         return view('auth.settings')->with('user', auth()->user());
     }
