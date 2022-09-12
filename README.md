@@ -13,5 +13,5 @@ Een Electronic Press Kit heeft een aantal essentiële eigenschappen nodig om aan
 -   [x] De band EPK achtergrond en tekstkleur moet aanpasbaar zijn.
 -   [x] Wanneer iemand als gast de website bezoekt, moet hij/zij kunnen zoeken op band-naam, en dan krijgt de gast een tabel met bandnamen en korte beschrijvingen die voldoen aan de zoekcriteria.
 -   [x] Na doorklikken op de bandnaam, komt de gast op de pagina die eruit ziet zoals hier-boven beschreven.
--   [ ] De gebruiker moet zijn/haar instellingen kunnen bijwerken.
+-   [x] De gebruiker moet zijn/haar instellingen kunnen bijwerken.
 -   [ ] Tests schrijven voor alle pagina's
