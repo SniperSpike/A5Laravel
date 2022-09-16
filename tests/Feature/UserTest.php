@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\User;
 
 class UserTest extends TestCase
 {
@@ -20,10 +21,12 @@ class UserTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /** @test */
     public function UserDuplication() {
         $user1 = User::make([
             'name' => 'Testing',
             'email' => 'test@example.com',
+            'password' => 'test123'
         ]);
 
         $user2 = User::make([
@@ -32,6 +35,15 @@ class UserTest extends TestCase
             'password' => 'test123'
         ]);
 
-        $this->assertTrue($user1->name != $user2->name);
+        $this->assertTrue($user1->name == $user2->name);
+    }
+    /** @test */
+    public function UserDelete() {
+        $user = User::factory()->count(1)->make();
+        $user = User::first();
+
+        if($user) {
+            $user->delete();
+        }
     }
 }

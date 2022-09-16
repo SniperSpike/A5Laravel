@@ -3,7 +3,8 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-
+use App\Models\Band;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 class BandTest extends TestCase
 {
     /**
@@ -11,8 +12,10 @@ class BandTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    /** @test */
+    public function BandCreate()
     {
-        $this->assertTrue(true);
+        $response = $this->get('/');
+        $response->assertStatus(200);
     }
 }
