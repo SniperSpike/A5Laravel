@@ -9,12 +9,8 @@ use App\Models\Band;
 
 class BandTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testMaakEenNieuweBandAan()
+    /** @test */
+    public function BandAanmaken()
     {
         $band = Band::factory()->count(1)->create();
         $band = Band::latest()->first();
@@ -22,8 +18,8 @@ class BandTest extends TestCase
             'bandnaam' => $band->bandnaam
         ]);
     }
-
-    public function testCheckOfBandCorrectIsAangemaakt()
+    /** @test */
+    public function BandVerifiëren()
     {
         $id = Band::latest()->first();
         $response = $this->get('/bandinfo/'.$id->id);
