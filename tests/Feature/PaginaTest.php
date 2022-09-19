@@ -10,7 +10,7 @@ use App\Models\User;
 class PaginaTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * Checkt of de Home pagina compleet is en werkend
      *
      * @return void
      */
@@ -24,6 +24,11 @@ class PaginaTest extends TestCase
         $response->assertSeeText('Meld je gratis aan');
     }
 
+    /**
+     * Checkt of de Verkennen pagina compleet is en werkend
+     *
+     * @return void
+     */
     public function testVerkennenPagina()
     {
         $response = $this->get('/verkennen');
@@ -32,6 +37,11 @@ class PaginaTest extends TestCase
         $response->assertSeeText('Onze bibliotheek');
     }
 
+    /**
+     * Checkt of de Login pagina compleet is en werkend
+     *
+     * @return void
+     */
     public function testLoginPagina()
     {
         $response = $this->get('/login');
@@ -43,6 +53,11 @@ class PaginaTest extends TestCase
         $response->assertSeeText('Meld je aan');
     }
 
+    /**
+     * Checkt of de Register pagina compleet is en werkend
+     *
+     * @return void
+     */
     public function testRegisterPagina()
     {
         $response = $this->get('/register');
@@ -55,16 +70,41 @@ class PaginaTest extends TestCase
         $response->assertSeeText('Aanmelden');
     }
 
+    /**
+     *
+     * Checkt of de Dashboard pagina compleet is en werkend
+     *
+     * @return void
+     */
     public function testDashboardPagina()
     {
-        $user = User::factory()->create();
-
+        $user = User::factory()->make();
         $response = $this->actingAs($user)->get('/login');
 
         $response = $this->get('/dashboard');
         $response->assertSeeText('Mijn Bands');
         $response->assertSeeText('Dashboard');
+    }
 
+    /**
+     * Checkt of de Edit pagina compleet is en werkend
+     *
+     * @return void
+     */
+    public function testEditPagina()
+    {
+        $user = User::factory()->make();
+        $response = $this->actingAs($user)->get('/login');
 
+        $response = $this->get('/edit');
+        $response->assertSeeText('Band Naam');
+        $response->assertSeeText('Achtergrond kleur');
+        $response->assertSeeText('Text kleur');
+        $response->assertSeeText('Thema kleur');
+        $response->assertSeeText('Video 1');
+        $response->assertSeeText('Video 2');
+        $response->assertSeeText('Video 3');
+        $response->assertSeeText('Opslaan');
+        $response->assertSeeText('Annuleren');
     }
 }
