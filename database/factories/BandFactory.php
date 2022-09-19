@@ -19,6 +19,14 @@ class BandFactory extends Factory
     {
         return [
             'bandnaam' => $this->faker->name(),
+            'biografie' => $this->Str::random(100),
+            'tekstkleur' => '#333333',
+            'achtegrrondkleur' => '#FFFFFF',
+            'themakleur' => '#222222',
+            'url1' => 'https://youtu.be/W_9xz1XXRQQ',
+            'url2' => 'https://youtu.be/W_9xz1XXRQQ',
+            'url3' => 'https://youtu.be/W_9xz1XXRQQ',
+
         ];
     }
 
