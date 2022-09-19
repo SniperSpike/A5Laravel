@@ -11,7 +11,8 @@ class BandTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    /** @test */
+    public function BandTest()
     {
         $this->assertTrue(true);
     }

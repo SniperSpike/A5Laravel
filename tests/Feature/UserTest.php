@@ -40,10 +40,9 @@ class UserTest extends TestCase
     /** @test */
     public function UserDelete() {
         $user = User::factory()->count(1)->create();
-        $user = User::first();
 
         if($user) {
-            $user->delete();
+            User::latest()->delete();
         }
         $this->assertTrue(true);
     }
