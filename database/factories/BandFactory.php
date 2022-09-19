@@ -19,14 +19,13 @@ class BandFactory extends Factory
     {
         return [
             'bandnaam' => $this->faker->name(),
-            'biografie' => $this->Str::random(100),
-            'tekstkleur' => '#333333',
-            'achtegrrondkleur' => '#FFFFFF',
-            'themakleur' => '#222222',
-            'url1' => 'https://youtu.be/W_9xz1XXRQQ',
-            'url2' => 'https://youtu.be/W_9xz1XXRQQ',
-            'url3' => 'https://youtu.be/W_9xz1XXRQQ',
-
+            'biografie' => $this->faker->text(),
+            'tekstkleur' => $this->faker->hexcolor(),
+            'achtergrondkleur' => $this->faker->hexcolor(),
+            'themakleur' => $this->faker->hexcolor(),
+            'url1' => 'https://www.youtube.com/embed/v2AC41dglnM',
+            'url2' => 'https://www.youtube.com/embed/v2AC41dglnM',
+            'url3' => 'https://www.youtube.com/embed/v2AC41dglnM',
         ];
     }
 
