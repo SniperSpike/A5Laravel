@@ -14,7 +14,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testHomePagina()
+    public function testPaginaHome()
     {
         $response = $this->get('/');
 
@@ -29,7 +29,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testVerkennenPagina()
+    public function testPaginaVerkennen()
     {
         $response = $this->get('/verkennen');
 
@@ -42,7 +42,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testLoginPagina()
+    public function testPaginaLogin()
     {
         $response = $this->get('/login');
 
@@ -58,7 +58,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testRegisterPagina()
+    public function testPaginaRegister()
     {
         $response = $this->get('/register');
 
@@ -76,7 +76,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testDashboardPagina()
+    public function testPaginaDashboard()
     {
         $user = User::factory()->make();
         $response = $this->actingAs($user)->get('/login');
@@ -91,7 +91,7 @@ class PaginaTest extends TestCase
      *
      * @return void
      */
-    public function testEditPagina()
+    public function testPaginaEdit()
     {
         $user = User::factory()->make();
         $response = $this->actingAs($user)->get('/login');
