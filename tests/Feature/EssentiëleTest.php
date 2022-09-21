@@ -22,6 +22,7 @@ class EssentiëleTest extends TestCase
         $response = $this->actingAs($user)->get('/login');
         $response = $this->get('/dashboard');
         $response->assertStatus(200);
+        
     }
     /** @test */
     public function UserMoetMeerDanEenBandKunnenAanmaken()
@@ -52,5 +53,6 @@ class EssentiëleTest extends TestCase
         $band2->delete();
         $beheer1->delete();
         $beheer2->delete();
+        $user->delete();
     }
 }
