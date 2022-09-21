@@ -12,7 +12,7 @@ class BandTest extends TestCase
     /** @test */
     public function BandAanmaken()
     {
-        $band = Band::factory()->count(1)->create();
+        $band = Band::factory()->make();
         $band = Band::latest()->first();
         $this->assertDatabaseHas('bands', [
             'bandnaam' => $band->bandnaam

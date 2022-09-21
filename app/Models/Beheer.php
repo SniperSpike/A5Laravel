@@ -9,6 +9,11 @@ class Beheer extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'band_id',
+        'user_id',
+    ];
+
     protected $table = "beheer";
 
 
