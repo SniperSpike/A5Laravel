@@ -17,8 +17,6 @@ class SearchTest extends TestCase
     /** @test */
     public function SearchVoorEenBand()
     {
-        $response = $this->get('/');
-
         $create = Band::factory()->create();
         $create->bandnaam = "Hoppa";
         $create->save();
