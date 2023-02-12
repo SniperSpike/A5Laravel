@@ -14,4 +14,4 @@ Een Electronic Press Kit heeft een aantal essentiële eigenschappen nodig om aan
 -   [x] Wanneer iemand als gast de website bezoekt, moet hij/zij kunnen zoeken op band-naam, en dan krijgt de gast een tabel met bandnamen en korte beschrijvingen die voldoen aan de zoekcriteria.
 -   [x] Na doorklikken op de bandnaam, komt de gast op de pagina die eruit ziet zoals hier-boven beschreven.
 -   [x] De gebruiker moet zijn/haar instellingen kunnen bijwerken.
--   [ ] Tests schrijven voor alle pagina's
+-   [x] Tests schrijven voor alle pagina's
